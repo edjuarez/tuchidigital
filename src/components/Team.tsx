@@ -1,0 +1,122 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const team = [
+  {
+    name: "Edu",
+    role: "CEO & Founder",
+    image: "/team/edu.webp",
+  },
+  {
+    name: "Vicky",
+    role: "Marketing Director",
+    image: "/team/vicky.webp",
+  },
+  {
+    name: "Angie",
+    role: "Creative Director",
+    image: "/team/angie.webp",
+  },
+];
+
+export function Team() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const context = gsap.context(() => {
+      const members = gsap.utils.toArray<HTMLElement>(".team-member");
+
+      gsap.set(members, {
+        opacity: 0,
+        y: 80,
+      });
+
+      members.forEach((member, index) => {
+        ScrollTrigger.create({
+          trigger: member,
+          start: "top 85%",
+          onEnter: () => {
+            gsap.to(member, {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              delay: index * 0.12,
+              ease: "power3.out",
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(member, {
+              opacity: 0,
+              y: 80,
+              duration: 0.5,
+              ease: "power3.in",
+            });
+          },
+        });
+      });
+    }, section);
+
+    return () => context.revert();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="team"
+      className="relative bg-white text-[#102A43]"
+    >
+      <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
+        <div className="mb-20 max-w-4xl md:mb-28">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#102A43]/50">
+            Nuestro equipo
+          </span>
+
+          <h2 className="mt-6 font-momo text-6xl leading-[0.88] tracking-[-0.05em] md:text-8xl">
+            Personas detrás
+            <br />
+            de cada proyecto.
+          </h2>
+
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
+            Un equipo de profesionales encargados de llevar tu visión a la
+            red de una manera clara, estratégica y profesional.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+          {team.map((member) => (
+            <article
+              key={member.name}
+              className="team-member group"
+            >
+              <div className="aspect-[4/5] overflow-hidden bg-[#F5F3EE]">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                />
+              </div>
+
+              <div className="mt-6 border-t border-[#102A43]/15 pt-5">
+                <h3 className="font-momo text-3xl leading-none tracking-[-0.04em] md:text-4xl">
+                  {member.name}
+                </h3>
+
+                <p className="mt-3 font-mono text-xs uppercase tracking-[0.15em] text-[#102A43]/50">
+                  {member.role}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

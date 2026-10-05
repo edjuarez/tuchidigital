@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-momo: "Momo Trust Display", sans-serif;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button {
+    cursor: none;
+  }
+}
