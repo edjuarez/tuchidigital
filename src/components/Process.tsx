@@ -88,18 +88,18 @@ useEffect(() => {
     <section
       ref={sectionRef}
       id="proceso"
-      className="relative bg-[#F5F3EE] text-[#102A43]"
+      className="relative bg-white text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="mb-20 max-w-3xl md:mb-28">
-          <span className="font-mono text-[1.2rem] uppercase tracking-[0.2em] text-[#102A43]/50">
+          <span className="section-eyebrow section-eyebrow-dark">
             Cómo trabajamos
           </span>
 
-          <h2 className="mt-6 font-momo text-[5rem] leading-[0.9] tracking-[-0.05em] md:text-[6rem]">
+          <h2 className="section-header section-header-dark mt-6">
             Del primer
             <br />
-            contacto al sitio online.
+            contacto al sitio <span className="text-[#55D6FF]">online.</span>
           </h2>
         </div>
 

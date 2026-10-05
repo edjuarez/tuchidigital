@@ -35,12 +35,46 @@ export function CustomCursor() {
       });
     };
 
+    const handleClick = () => {
+      gsap.timeline()
+        .to(cursor, {
+          scale: 0.65,
+          duration: 0.08,
+          ease: "power2.in",
+        })
+        .to(cursor, {
+          scale: 1.15,
+          duration: 0.16,
+          ease: "back.out(2.5)",
+        })
+        .to(cursor, {
+          scale: 1,
+          duration: 0.12,
+          ease: "power2.out",
+        });
+
+      gsap.timeline()
+        .to(follower, {
+          scale: 1.35,
+          opacity: 0.35,
+          duration: 0.08,
+          ease: "power2.out",
+        })
+        .to(follower, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.25,
+          ease: "back.out(2.5)",
+        });
+    };
+
     const handleEnter = () => {
       gsap.to(follower, {
-        width: 70,
-        height: 70,
-        borderColor: "#FF6B5C",
-        backgroundColor: "rgba(255, 107, 92, 0.08)",
+        width: 72,
+        height: 72,
+        borderColor: "#55D6FF",
+        backgroundColor: "rgba(85, 214, 255, 0.08)",
+        boxShadow: "0 0 30px rgba(85, 214, 255, 0.25)",
         duration: 0.3,
         ease: "power3.out",
       });
@@ -53,16 +87,20 @@ export function CustomCursor() {
       gsap.to(label, {
         opacity: 1,
         scale: 1,
+        color: "#55D6FF",
         duration: 0.25,
       });
     };
 
     const handleLeave = () => {
       gsap.to(follower, {
-        width: 32,
-        height: 32,
-        borderColor: "rgba(255, 107, 92, 0.5)",
+        width: 40,
+        height: 40,
+        borderColor: "rgba(85, 214, 255, 0.5)",
         backgroundColor: "transparent",
+        boxShadow: "none",
+        scale: 1,
+        opacity: 1,
         duration: 0.3,
         ease: "power3.out",
       });
@@ -80,7 +118,7 @@ export function CustomCursor() {
     };
 
     const interactiveElements = document.querySelectorAll(
-      "a, button, [data-cursor]"
+      "a, button, [data-cursor]",
     );
 
     interactiveElements.forEach((element) => {
@@ -89,9 +127,11 @@ export function CustomCursor() {
     });
 
     window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousedown", handleClick);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mousedown", handleClick);
 
       interactiveElements.forEach((element) => {
         element.removeEventListener("mouseenter", handleEnter);
@@ -104,11 +144,11 @@ export function CustomCursor() {
     <>
       <div
         ref={followerRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#FF6B5C]/50"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#55D6FF]/50"
       >
         <span
           ref={labelRef}
-          className="scale-50 text-sm text-[#FF6B5C] opacity-0"
+          className="scale-50 text-sm text-[#55D6FF] opacity-0"
         >
           +
         </span>
@@ -116,7 +156,7 @@ export function CustomCursor() {
 
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed left-0 top-0 z-[10000] h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF6B5C]"
+        className="pointer-events-none fixed left-0 top-0 z-[10000] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#55D6FF]"
       />
     </>
   );

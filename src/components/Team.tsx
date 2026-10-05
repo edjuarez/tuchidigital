@@ -70,18 +70,18 @@ export function Team() {
     <section
       ref={sectionRef}
       id="team"
-      className="relative bg-white text-[#102A43]"
+      className="relative bg-white text-[#102A43] pb-50"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="mb-20 max-w-4xl md:mb-28">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#102A43]/50">
+          <span className="section-eyebrow section-eyebrow-dark">
             Nuestro equipo
           </span>
 
-          <h2 className="mt-6 font-momo text-6xl leading-[0.88] tracking-[-0.05em] md:text-8xl">
+          <h2 className="section-header section-header-dark">
             Personas detrás
             <br />
-            de cada proyecto.
+            de cada <span className="text-[#55D6FF]">proyecto.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
@@ -90,31 +90,33 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
-          {team.map((member) => (
-            <article
-              key={member.name}
-              className="team-member group"
-            >
-              <div className="aspect-[4/5] overflow-hidden bg-[#F5F3EE]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-              </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+            {team.map((member) => (
+              <article
+                key={member.name}
+                className="team-member group"
+              >
+                <div className="aspect-[4/4.5] overflow-hidden bg-[#F5F3EE]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                </div>
 
-              <div className="mt-6 border-t border-[#102A43]/15 pt-5">
-                <h3 className="font-momo text-3xl leading-none tracking-[-0.04em] md:text-4xl">
-                  {member.name}
-                </h3>
+                <div className="mt-5 border-t border-[#102A43]/15 pt-4">
+                  <h3 className="font-momo text-3xl leading-none tracking-[-0.04em]">
+                    {member.name}
+                  </h3>
 
-                <p className="mt-3 font-mono text-xs uppercase tracking-[0.15em] text-[#102A43]/50">
-                  {member.role}
-                </p>
-              </div>
-            </article>
-          ))}
+                  <p className="mt-2 font-mono text-[1rem] uppercase tracking-[0.15em] text-[#102A43]/50">
+                    {member.role}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -73,23 +73,21 @@ export function Clients() {
     <section
       ref={sectionRef}
       id="portfolio"
-      className="relative bg-[#F5F3EE] text-[#102A43]"
+      className="relative bg-white text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="mb-20 max-w-4xl md:mb-28">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#102A43]/50">
-            Portfolio
+          <span className="section-eyebrow section-eyebrow-dark">
+            Nuestros clientes
           </span>
 
-          <h2 className="mt-6 font-momo text-6xl leading-[0.88] tracking-[-0.05em] md:text-8xl">
-            Proyectos
+          <h2 className="section-header section-header-dark mt-6">
+            Ideas que llevamos a la <span className="text-[#55D6FF]">web.</span>
             <br />
-            reales.
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
-            Sitios web que hemos diseñado y desarrollado para nuestros
-            clientes.
+            Una selección de proyectos desarrollados para distintas necesidades y negocios. Diseño, desarrollo y tecnología trabajando juntos para crear productos digitales sólidos.
           </p>
         </div>
 
@@ -100,16 +98,16 @@ export function Clients() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="portfolio-project group grid overflow-hidden border border-[#102A43]/15 bg-white/40 transition-colors duration-500 hover:border-[#55D6FF] md:grid-cols-[1.6fr_1fr]"
+              className="portfolio-project group grid overflow-hidden px-5 border border-[#102A43]/15 bg-white/40 transition-colors duration-500 hover:border-[#55D6FF] md:grid-cols-[1.6fr_1fr]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#102A43] md:aspect-auto md:min-h-[520px]">
+              <div className="relative aspect-[16/10] overflow-hidden md:aspect-auto md:min-h-[520px]">
                 <img
                   src={project.image}
                   alt={project.name}
                   className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
 
-                <div className="absolute inset-0 bg-[#102A43]/0 transition-colors duration-500 group-hover:bg-[#102A43]/10" />
+{/*                 <div className="absolute inset-0 bg-[#102A43]/0 transition-colors duration-500 group-hover:bg-[#102A43]/10" /> */}
 
                 <span className="absolute left-6 top-6 font-mono text-xs tracking-[0.2em] text-white/70 md:left-8 md:top-8">
                   {project.number}

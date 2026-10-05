@@ -135,7 +135,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-svh overflow-hidden bg-[#102A43] text-[#F5F3EE]"
+      className="relative min-h-svh overflow-hidden bg-[#102A43] text-[#F5F3EE] pb-50 section-dark-end"
     >
       <div
         ref={backgroundRef}

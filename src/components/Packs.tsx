@@ -135,15 +135,15 @@ export function Packs() {
     <section
       ref={sectionRef}
       id="packs"
-      className="relative overflow-hidden bg-[#102A43] text-[#F5F3EE]"
+      className="relative overflow-hidden section-dark-start bg-[#102A43] text-[#F5F3EE] py-50 section-dark-end "
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="packs-header mb-20 max-w-4xl md:mb-28">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#55D6FF]">
-            Packs
+          <span className="section-eyebrow section-eyebrow-light">
+            Nuestros Packs
           </span>
 
-          <h2 className="mt-6 font-momo text-6xl leading-[0.88] tracking-[-0.05em] md:text-8xl">
+          <h2 className="section-header section-header-light mt-6">
             Elegí cómo
             <br />
             empezar.
