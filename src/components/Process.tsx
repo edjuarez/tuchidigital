@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const steps = [
   {
     number: "01",
@@ -30,7 +31,7 @@ const steps = [
   },
   {
     number: "05",
-    title: "Publicación",
+    title: "Publicación!",
     description:
       "Dejamos todo listo para que tu sitio esté online, funcionando correctamente y preparado para recibir a tus visitantes.",
   },
@@ -39,50 +40,50 @@ const steps = [
 export function Process() {
   const sectionRef = useRef<HTMLElement>(null);
 
-useEffect(() => {
-  const section = sectionRef.current;
+  useEffect(() => {
+    const section = sectionRef.current;
 
-  if (!section) return;
+    if (!section) return;
 
-  const context = gsap.context(() => {
-    const cards = gsap.utils.toArray<HTMLElement>(".process-card");
+    const context = gsap.context(() => {
+      const cards = gsap.utils.toArray<HTMLElement>(".process-card");
 
-    gsap.set(cards, {
-      y: 80,
-      opacity: 0,
-      scale: 0.96,
-    });
-
-    cards.forEach((card, index) => {
-      ScrollTrigger.create({
-        trigger: card,
-        start: "top 85%",
-        end: "bottom 15%",
-        onEnter: () => {
-          gsap.to(card, {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 0.8,
-            delay: index * 0.08,
-            ease: "power3.out",
-          });
-        },
-        onLeaveBack: () => {
-          gsap.to(card, {
-            y: 80,
-            opacity: 0,
-            scale: 0.96,
-            duration: 0.5,
-            ease: "power3.in",
-          });
-        },
+      gsap.set(cards, {
+        y: 80,
+        opacity: 0,
+        scale: 0.96,
       });
-    });
-  }, section);
 
-  return () => context.revert();
-}, []);
+      cards.forEach((card, index) => {
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top 85%",
+          end: "bottom 15%",
+          onEnter: () => {
+            gsap.to(card, {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.8,
+              delay: index * 0.08,
+              ease: "power3.out",
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(card, {
+              y: 80,
+              opacity: 0,
+              scale: 0.96,
+              duration: 0.5,
+              ease: "power3.in",
+            });
+          },
+        });
+      });
+    }, section);
+
+    return () => context.revert();
+  }, []);
 
   return (
     <section
@@ -107,26 +108,24 @@ useEffect(() => {
           {steps.map((step, index) => (
             <article
               key={step.number}
-              className={`process-card group relative min-h-[360px] overflow-hidden border border-[#102A43]/15 bg-white/50 p-8 transition-colors duration-300 hover:border-[#55D6FF] md:p-10 ${
-                index === 4 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]" : ""
+              className={`process-card group relative min-h-[360px] overflow-hidden border border-[#F5F3EE]/15 bg-[#102A43] p-8 text-[#F5F3EE] transition-colors duration-300 hover:border-[#55D6FF] md:p-10 ${
+                index === 4
+                  ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]"
+                  : ""
               }`}
             >
               <div className="flex items-start justify-between">
-                <span className="process-number font-mono text-[5rem] leading-none tracking-[-0.08em] text-[#55D6FF] transition-colors duration-300 group-hover:text-[#102A43] md:text-[6rem]">
-                  {step.number}
-                </span>
-
-                <span className="process-arrow text-3xl text-[#55D6FF]">
-                  ↗
+                <span className="process-number font-mono text-[5rem] leading-none tracking-[-0.08em] text-[#55D6FF] transition-colors duration-300 group-hover:text-[#F5F3EE] md:text-[6rem]">
+                  {step.number}.
                 </span>
               </div>
 
               <div className="mt-16">
-                <h3 className="process-title font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl">
+                <h3 className="process-title font-momo text-4xl leading-[0.9] tracking-[-0.04em] text-[#F5F3EE] md:text-5xl">
                   {step.title}
                 </h3>
 
-                <p className="process-description mt-6 max-w-xl text-lg leading-relaxed text-[#102A43]/65 md:text-xl">
+                <p className="process-description mt-6 max-w-xl text-lg leading-relaxed text-[#F5F3EE]/65 md:text-xl">
                   {step.description}
                 </p>
               </div>

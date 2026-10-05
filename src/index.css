@@ -59,7 +59,19 @@
   }
 }
 
-.section-dark-end {
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .section-dark-end {
   position: relative;
 }
 
@@ -92,4 +104,4 @@
   background: var(--color-navy);
   z-index: 2;
   pointer-events: none;
-}
+} */

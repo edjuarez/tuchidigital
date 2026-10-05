@@ -8,12 +8,13 @@ import { Team } from "./components/Team";
 import { Technologies } from "./components/Technologies";
 import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
-import { SectionDivider } from "./components/SectionDivider";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <CustomCursor />
+      <Navbar />
       <Hero />
       <Intro />
       <Technologies />

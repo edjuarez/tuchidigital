@@ -15,7 +15,7 @@ const benefits = [
   "Garantía de satisfacción",
 ];
 
-const services = ["WEB", "LANDINGS", "E-COMMERCE"];
+const services = ["WEB", "LANDINGS", "E-COMMERCE", "MARKETING DIGITAL"];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -135,7 +135,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-svh overflow-hidden bg-[#102A43] text-[#F5F3EE] pb-50 section-dark-end"
+      className="relative min-h-svh overflow-hidden bg-[#102A43] text-[#F5F3EE] py-20 section-dark-end"
     >
       <div
         ref={backgroundRef}
@@ -158,7 +158,7 @@ export function Hero() {
       <div className="relative z-10 flex min-h-svh flex-col px-6 py-6 md:px-10 md:py-8 lg:px-16">
         <main className="hero-content flex flex-1 items-center justify-center">
           <div className="w-full max-w-6xl text-center">
-            <h1 className="hero-title font-momo text-[7rem] leading-[0.85] tracking-[-0.055em]">
+            <h1 className="hero-title font-momo md:text-[8rem] text-8xl leading-[0.85] tracking-[-0.055em]">
               <span>tuchi </span>
               <span
                 className="text-[#55D6FF]"
@@ -183,7 +183,7 @@ export function Hero() {
               {services.map((service) => (
                 <span
                   key={service}
-                  className="font-mono text-sm uppercase tracking-[0.2em] text-white/80 md:text-base"
+                  className="font-mono font-bold text-sm uppercase tracking-[0.2em] text-white/80 md:text-base"
                 >
                   {service}
                 </span>
@@ -212,10 +212,6 @@ export function Hero() {
                   className="group inline-flex items-center gap-6 border border-[#55D6FF] bg-[#55D6FF] px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-[#102A43] transition-all duration-300 hover:bg-transparent hover:text-[#55D6FF]"
                 >
                   <span>Pedir mi sitio ahora</span>
-
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
                 </a>
               </div>
             </div>

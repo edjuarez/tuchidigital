@@ -232,7 +232,7 @@ export function Technologies() {
             de la web moderna.
           </h2>
 
-          <p className="section-description section-description-light mt-8">
+          <p className="section-description section-description-dark mt-8">
             Cada proyecto se desarrolla desde cero utilizando tecnologías
             profesionales y actuales. Elegimos las herramientas adecuadas para
             cada necesidad, buscando rendimiento, seguridad, escalabilidad y
