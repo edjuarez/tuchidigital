@@ -3,15 +3,17 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaCheckCircle } from "react-icons/fa";
+import { WebsiteMockup } from "./ui/WebsiteMockup";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const benefits = [
   "Sitios web a medida",
-  "SEO inicial",
+  "SEO",
   "Sin costo de mantenimiento",
-  "Adaptados a dispositivos móviles",
-  "Enlaces a tus redes sociales",
+  "Adaptados",
+  "Enlaces a redes sociales",
   "Garantía de satisfacción",
 ];
 
@@ -20,12 +22,16 @@ const services = ["WEB", "LANDINGS", "E-COMMERCE", "MARKETING DIGITAL"];
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
+  const mockupRef = useRef<HTMLDivElement>(null);
+  const benefitsRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const hero = heroRef.current;
     const background = backgroundRef.current;
+    const mockup = mockupRef.current;
+    const benefitsContainer = benefitsRef.current;
 
-    if (!hero || !background) return;
+    if (!hero || !background || !mockup || !benefitsContainer) return;
 
     const context = gsap.context(() => {
       const intro = gsap.timeline({
@@ -68,16 +74,6 @@ export function Hero() {
           "-=0.4",
         )
         .from(
-          ".hero-benefit",
-          {
-            x: -20,
-            opacity: 0,
-            duration: 0.45,
-            stagger: 0.07,
-          },
-          "-=0.25",
-        )
-        .from(
           ".hero-actions",
           {
             y: 20,
@@ -86,6 +82,42 @@ export function Hero() {
           },
           "-=0.25",
         );
+
+      gsap.fromTo(
+        mockup,
+        {
+          y: 180,
+          opacity: 0,
+          rotate: 2,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          rotate: 0,
+          duration: 1.4,
+          delay: 0.25,
+          ease: "power4.out",
+        },
+      );
+
+      gsap.to(mockup, {
+        y: -10,
+        duration: 3.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: 1.7,
+      });
+
+      gsap.from(".hero-benefit", {
+        y: 30,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.7,
+        stagger: 0.1,
+        delay: 0.8,
+        ease: "power3.out",
+      });
 
       gsap.to(background, {
         yPercent: 18,
@@ -122,6 +154,29 @@ export function Hero() {
         duration: 1.4,
         ease: "power3.out",
       });
+
+      gsap.to(mockup, {
+        x: x * -18,
+        y: y * -12,
+        rotateY: x * -2,
+        rotateX: y * 2,
+        duration: 1.5,
+        ease: "power3.out",
+      });
+
+      gsap.to(".hero-benefit", {
+        x: (index, target) => {
+          const intensity = Number(target.dataset.intensity || 1);
+          return x * -12 * intensity;
+        },
+        y: (index, target) => {
+          const intensity = Number(target.dataset.intensity || 1);
+          return y * -8 * intensity;
+        },
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.02,
+      });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -135,7 +190,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-svh overflow-hidden bg-[#102A43] text-[#F5F3EE] py-20 section-dark-end"
+      className="relative min-h-svh overflow-hidden bg-[#102A43] py-20 pt-18 text-[#F5F3EE] section-dark-end"
     >
       <div
         ref={backgroundRef}
@@ -146,7 +201,9 @@ export function Hero() {
         <div className="absolute left-[60%] top-[20%] h-[32vw] w-[32vw] rounded-full border border-white/[0.07]" />
         <div className="absolute left-[66%] top-[26%] h-[20vw] w-[20vw] rounded-full border border-white/[0.06]" />
         <div className="absolute left-[70%] top-[30%] h-[10vw] w-[10vw] rounded-full bg-[#55D6FF]/10 blur-3xl" />
+
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgba(255,255,255,0.09),transparent_32%)]" />
+
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(85,214,255,0.12),transparent_28%)]" />
       </div>
 
@@ -155,11 +212,12 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px]"
       />
 
-      <div className="relative z-10 flex min-h-svh flex-col px-6 py-6 md:px-10 md:py-8 lg:px-16">
-        <main className="hero-content flex flex-1 items-center justify-center">
-          <div className="w-full max-w-6xl text-center">
-            <h1 className="hero-title font-momo md:text-[8rem] text-8xl leading-[0.85] tracking-[-0.055em]">
+      <div className="relative z-10 flex min-h-svh items-center px-6 py-6 md:px-10 md:py-8 lg:px-16">
+        <main className="hero-content mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.20fr_0.85fr] lg:gap-12 xl:gap-20">
+          <div className="w-full text-left">
+            <h1 className="hero-title font-momo text-6xl leading-[0.85] tracking-[-0.055em] md:text-[7rem]">
               <span>tuchi </span>
+
               <span
                 className="text-[#55D6FF]"
                 style={{
@@ -171,41 +229,31 @@ export function Hero() {
               </span>
             </h1>
 
-            <div className="hero-description mx-auto mt-10 max-w-4xl">
+            <div className="hero-description mt-10 max-w-4xl">
               <br />
-              <p className="text-[3rem] font-medium leading-[0.92] tracking-[-0.045em]">
-                Creamos sitios web modernos, <br />
-                adaptados a tus necesidades.
+
+              <p className="text-[2.2rem] font-medium leading-[0.92] tracking-[-0.045em] md:text-[2.8rem] xl:text-[3rem]">
+                Creamos sitios web modernos,{" "}
+                <br className="hidden md:block" />
+                profesionales y de alto{" "}
+                <span className="text-[3.2rem] font-bold text-violet md:text-[4rem]">
+                  impacto.
+                </span>
               </p>
             </div>
 
-            <div className="hero-services mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-x-10 gap-y-3 border-y border-white/15 py-5">
+            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-start gap-x-8 gap-y-3 border-y border-white/15 py-5 md:gap-x-10">
               {services.map((service) => (
                 <span
                   key={service}
-                  className="font-mono font-bold text-sm uppercase tracking-[0.2em] text-white/80 md:text-base"
+                  className="font-mono text-sm font-bold uppercase tracking-[0.2em] text-white/80 md:text-base"
                 >
                   {service}
                 </span>
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-10">
-              <ul className="grid grid-cols-1 gap-x-12 gap-y-5 sm:grid-cols-2">
-                {benefits.map((benefit) => (
-                  <li
-                    key={benefit}
-                    className="hero-benefit flex items-center justify-center gap-4 text-base text-white/80 md:text-lg"
-                  >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#55D6FF]/60 text-xs text-[#55D6FF]">
-                      ✓
-                    </span>
-
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-
+            <div className="mt-10 flex flex-col items-start gap-10">
               <div className="hero-actions">
                 <a
                   href="#contacto"
@@ -215,6 +263,69 @@ export function Hero() {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="relative flex w-full items-center justify-center lg:justify-end">
+            <div
+              ref={mockupRef}
+              className="relative z-10 flex w-full items-center justify-center"
+              style={{ perspective: "1200px" }}
+            >
+              <WebsiteMockup />
+            </div>
+
+            <ul
+              ref={benefitsRef}
+              className="pointer-events-none absolute inset-0 z-20 hidden lg:block"
+            >
+              <li
+                data-intensity="0.8"
+                className="hero-benefit absolute left-[-4%] top-[5%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>Sitios web a medida</span>
+              </li>
+
+              <li
+                data-intensity="1.1"
+                className="hero-benefit absolute right-[-5%] top-[10%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>SEO</span>
+              </li>
+
+              <li
+                data-intensity="0.7"
+                className="hero-benefit absolute bottom-[8%] left-[-6%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>Sin costo de mantenimiento</span>
+              </li>
+
+              <li
+                data-intensity="1.2"
+                className="hero-benefit absolute right-[-7%] top-[38%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>Adaptados</span>
+              </li>
+
+              <li
+                data-intensity="0.9"
+                className="hero-benefit absolute bottom-[24%] right-[-5%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>Enlaces a redes sociales</span>
+              </li>
+
+              <li
+                data-intensity="1"
+                className="hero-benefit absolute bottom-[0%] right-[22%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+              >
+                <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
+                <span>Garantía de satisfacción</span>
+              </li>
+            </ul>
           </div>
         </main>
       </div>

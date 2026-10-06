@@ -9,6 +9,7 @@ import { Technologies } from "./components/Technologies";
 import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import Navbar from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -17,13 +18,14 @@ function App() {
       <Navbar />
       <Hero />
       <Intro />
-      <Technologies />
       <Process />
+      <Technologies />
       <Packs />
       <Clients />
       <Team />
       <FAQ />
       <Contact />
+      <Footer />
     </>
   );
 }

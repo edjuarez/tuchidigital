@@ -15,11 +15,11 @@ const team = [
     role: "Marketing Director",
     image: "/team/vicky.webp",
   },
-  {
+/*   {
     name: "Angie",
     role: "Creative Director",
     image: "/team/angie.webp",
-  },
+  }, */
 ];
 
 export function Team() {
@@ -32,7 +32,24 @@ export function Team() {
 
     const context = gsap.context(() => {
       const members = gsap.utils.toArray<HTMLElement>(".team-member");
-
+      gsap.fromTo(
+        ".intro-content",
+        {
+          opacity: 0,
+          y: 60,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".intro-content",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
       gsap.set(members, {
         opacity: 0,
         y: 80,
@@ -73,15 +90,15 @@ export function Team() {
       className="relative bg-white text-[#102A43] pb-50"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
-        <div className="mb-20 max-w-4xl md:mb-28">
+        <div className="intro-content mb-20 max-w-4xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
             Nuestro equipo
           </span>
 
-          <h2 className="section-header section-header-dark">
+          <h2 className="section-header section-header-dark mt-6">
             Personas detrás
             <br />
-            de cada <span className="text-[#55D6FF]">proyecto.</span>
+            de cada <span className="text-lime">proyecto.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
@@ -91,13 +108,13 @@ export function Team() {
         </div>
 
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 md:gap-8">
             {team.map((member) => (
               <article
                 key={member.name}
-                className="team-member group"
+                className="team-member group w-full max-w-[320px]"
               >
-                <div className="aspect-[4/4.5] overflow-hidden bg-[#F5F3EE]">
+                <div className="aspect-[4/4.5] w-full overflow-hidden bg-[#F5F3EE]">
                   <img
                     src={member.image}
                     alt={member.name}

@@ -8,7 +8,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiHtml5,
-  SiCss,
+  SiGsap,
   SiTailwindcss,
   SiNodedotjs,
   SiSupabase,
@@ -17,12 +17,10 @@ import {
   SiCloudflare,
   SiGit,
   SiGithub,
-  SiGreensock,
   SiResend,
   SiStripe,
 } from "react-icons/si";
-
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaCss3Alt } from "react-icons/fa";
 
 import { PiOpenAiLogoLight } from "react-icons/pi";
 
@@ -67,8 +65,8 @@ const technologies = [
   },
   {
     name: "CSS3",
-    icon: SiCss,
-    size: "small",
+    icon: FaCss3Alt,
+    size: "medium",
     color: "#1572B6",
   },
   {
@@ -91,7 +89,7 @@ const technologies = [
   },
   {
     name: "GSAP",
-    icon: SiGreensock,
+    icon: SiGsap,
     size: "medium",
     color: "#88CE02",
   },
@@ -227,7 +225,7 @@ export function Technologies() {
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Construimos con las <span className="text-[#55D6FF]">herramientas</span>
+            Construimos con las <span className="text-coral">herramientas</span>
             <br />
             de la web moderna.
           </h2>

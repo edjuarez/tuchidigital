@@ -36,6 +36,25 @@ export function Clients() {
     const context = gsap.context(() => {
       const projects = gsap.utils.toArray<HTMLElement>(".portfolio-project");
 
+      gsap.fromTo(
+        ".intro-content",
+        {
+          opacity: 0,
+          y: 60,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".intro-content",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+
       gsap.set(projects, {
         opacity: 0,
         y: 100,
@@ -76,47 +95,62 @@ export function Clients() {
       className="relative bg-white text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
-        <div className="mb-20 max-w-4xl md:mb-28">
+        <div className="intro-content mb-20 max-w-4xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
             Nuestros clientes
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Ideas que llevamos a la <span className="text-[#55D6FF]">web.</span>
+            Marcas que ya confiaron en{" "}
+            <span className="text-violet">nosotros.</span>
             <br />
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
-            Una selección de proyectos desarrollados para distintas necesidades y negocios. Diseño, desarrollo y tecnología trabajando juntos para crear productos digitales sólidos.
+            Una selección de proyectos desarrollados para distintas
+            necesidades y negocios. Diseño, desarrollo y tecnología trabajando
+            juntos para crear productos digitales sólidos.
           </p>
         </div>
 
-        <div className="space-y-10 md:space-y-16">
-          {projects.map((project) => (
+        <div className="space-y-24 md:space-y-36">
+          {projects.map((project, index) => (
             <a
               key={project.number}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="portfolio-project group grid overflow-hidden px-5 border border-[#102A43]/15 bg-white/40 transition-colors duration-500 hover:border-[#55D6FF] md:grid-cols-[1.6fr_1fr]"
+              className="portfolio-project group block"
             >
-              <div className="relative aspect-[16/10] overflow-hidden md:aspect-auto md:min-h-[520px]">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
+              <div className="relative">
+                <div
+                  className={`relative overflow-hidden bg-[#F5F3EE] ${
+                    index % 2 === 1
+                      ? "md:ml-16 lg:ml-24"
+                      : "md:mr-16 lg:mr-24"
+                  }`}
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden md:aspect-[16/9]">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    />
 
-{/*                 <div className="absolute inset-0 bg-[#102A43]/0 transition-colors duration-500 group-hover:bg-[#102A43]/10" /> */}
+                    <span className="absolute left-6 top-6 font-mono text-xs tracking-[0.2em] text-[#102A43]/50 md:left-8 md:top-8">
+                      {project.number}
+                    </span>
+                  </div>
+                </div>
 
-                <span className="absolute left-6 top-6 font-mono text-xs tracking-[0.2em] text-white/70 md:left-8 md:top-8">
-                  {project.number}
-                </span>
-              </div>
-
-              <div className="flex flex-col justify-between p-8 md:p-10 lg:p-12">
-                <div>
-                  <div className="flex min-h-16 items-center">
+                <div
+                  className={`relative z-10 -mt-8 w-full bg-[#102A43] p-8 text-[#F5F3EE] shadow-2xl md:absolute md:bottom-[-32px] md:mt-0 md:w-[42%] md:p-10 lg:w-[38%] lg:p-12 ${
+                    index % 2 === 1
+                      ? "md:left-0"
+                      : "md:right-0"
+                  }`}
+                >
+                  <div className="flex min-h-12 items-center">
                     {project.logo ? (
                       <img
                         src={project.logo}
@@ -124,29 +158,31 @@ export function Clients() {
                         className="max-h-12 max-w-[180px] object-contain"
                       />
                     ) : (
-                      <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#102A43]/40">
+                      <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#F5F3EE]/45">
                         {project.name}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="mt-8 font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl lg:text-6xl">
+                  <h3 className="mt-8 font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl">
                     {project.name}
                   </h3>
 
-                  <p className="mt-6 max-w-md text-lg leading-relaxed text-[#102A43]/60">
+                  <p className="mt-6 text-lg leading-relaxed text-[#F5F3EE]/60">
                     {project.description}
                   </p>
-                </div>
 
-                <div className="mt-12 flex items-center justify-between border-t border-[#102A43]/15 pt-6">
-                  <span className="font-mono text-xs uppercase tracking-[0.15em]">
-                    Visitar sitio
-                  </span>
+                  <div className="mt-10 flex items-center justify-between border-t border-[#F5F3EE]/15 pt-6">
+                    <span className="font-mono text-xs uppercase tracking-[0.15em] text-[#F5F3EE]/70 transition-colors duration-300 group-hover:text-[#55D6FF]">
+                      Visitar sitio
+                    </span>
 
-                  <span className="flex h-12 w-12 items-center justify-center border border-[#102A43]/20 text-xl transition-all duration-300 group-hover:border-[#55D6FF] group-hover:bg-[#55D6FF] group-hover:text-[#102A43]">
-                    ↗
-                  </span>
+                    <span className="flex h-12 w-12 items-center justify-center border border-[#55D6FF]/40 text-xl text-[#55D6FF] transition-all duration-300 group-hover:border-[#55D6FF] group-hover:bg-[#55D6FF] group-hover:text-[#102A43]">
+                      ↗
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#55D6FF] transition-all duration-500 group-hover:w-full" />
                 </div>
               </div>
             </a>

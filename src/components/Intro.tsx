@@ -6,7 +6,6 @@ import {
   FiShoppingBag,
   FiLayers,
   FiHeadphones,
-  FiArrowUpRight,
 } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,9 +24,9 @@ const features = [
     icon: FiShoppingBag,
   },
   {
-    title: "Diseño a medida",
+    title: "Marketing digital",
     description:
-      "Una experiencia pensada específicamente para tu marca y tus necesidades.",
+      "Estrategias para mejorar tu visibilidad y conectar con nuevos clientes.",
     icon: FiLayers,
   },
   {
@@ -73,13 +72,13 @@ export function Intro() {
           card,
           {
             opacity: 0,
-            x: 120,
+            y: 100,
           },
           {
             opacity: 1,
-            x: 0,
+            y: 0,
             duration: 0.8,
-            delay: index * 0.12,
+            delay: index * 0.35,
             ease: "power3.out",
             scrollTrigger: {
               trigger: card,
@@ -128,7 +127,8 @@ export function Intro() {
           <h2 className="section-header section-header-dark mt-6">
             Creamos tu presencia
             <br />
-            digital de manera <span className="text-[#55D6FF]">profesional.</span>
+            digital de manera{" "}
+            <span className="text-[#55D6FF]">profesional.</span>
           </h2>
 
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#102A43]/65 md:text-xl">
@@ -139,47 +139,45 @@ export function Intro() {
             para que llegue a las personas que realmente importan.
           </p>
         </div>
-
-        <div className="mt-16 grid grid-cols-1 border-l border-t border-[#102A43]/15 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
-              <article
-                key={feature.title}
-                className="intro-feature group relative border-b border-r border-[#102A43]/15 bg-white p-7 transition-colors duration-300 hover:bg-[#102A43] hover:text-[#F5F3EE] md:p-8"
-              >
-                <div className="flex items-start justify-between">
-                  <Icon
-                    className="text-3xl text-[#55D6FF] transition-transform duration-300 group-hover:scale-110"
-                    strokeWidth={1.5}
-                  />
+              <div key={feature.title} className="intro-feature relative flex h-full">
+                <div className="absolute -bottom-3 -right-3 h-full w-full bg-[#102A43]" />
 
-                  <FiArrowUpRight className="text-xl opacity-30 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
-                </div>
+                <article
+                  className="group relative z-10 flex h-full w-full flex-col  border-[#102A43] bg-cyan p-7 transition-colors duration-300 hover:bg-[#102A43] hover:text-[#F5F3EE] md:p-8"
+                >
+                  <div className="flex items-start justify-between">
+                    <Icon
+                      className="text-4xl text-white transition-transform duration-300 group-hover:scale-110"
+                      strokeWidth={2}
+                    />
+                  </div>
 
-                <h3 className="mt-16 font-momo text-2xl leading-none tracking-[-0.03em]">
-                  {feature.title}
-                </h3>
+                  <h3 className="mt-16 font-momo text-2xl leading-none tracking-[-0.03em]">
+                    {feature.title}
+                  </h3>
 
-                <p className="mt-4 text-sm leading-relaxed text-[#102A43]/55 transition-colors duration-300 group-hover:text-[#F5F3EE]/60">
-                  {feature.description}
-                </p>
+                  <p className="mt-4 text-base leading-relaxed text-[#102A43] transition-colors duration-300 group-hover:text-[#F5F3EE]/60">
+                    {feature.description}
+                  </p>
 
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#55D6FF] transition-all duration-500 group-hover:w-full" />
-              </article>
+                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#55D6FF] transition-all duration-500 group-hover:w-full" />
+                </article>
+              </div>
             );
           })}
         </div>
 
         <div className="intro-cta mt-12">
           <a
-            href="#contact"
-            className="group inline-flex items-center gap-4 border border-[#102A43] bg-[#102A43] px-7 py-4 font-mono text-xs uppercase tracking-[0.15em] text-[#F5F3EE] transition-all duration-300 hover:bg-[#55D6FF] hover:text-[#102A43]"
+            href="#contacto"
+            className="group inline-flex items-center gap-6 border border-[#55D6FF] bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
           >
-            Consulta tu proyecto
-
-            <FiArrowUpRight className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            <span>Consulta tu proyecto</span>
           </a>
         </div>
       </div>

@@ -47,6 +47,24 @@ export function Process() {
 
     const context = gsap.context(() => {
       const cards = gsap.utils.toArray<HTMLElement>(".process-card");
+      gsap.fromTo(
+        ".intro-content",
+        {
+          opacity: 0,
+          y: 60,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".intro-content",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
 
       gsap.set(cards, {
         y: 80,
@@ -92,7 +110,7 @@ export function Process() {
       className="relative bg-white text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
-        <div className="mb-20 max-w-3xl md:mb-28">
+        <div className="intro-content mb-20 max-w-3xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
             Cómo trabajamos
           </span>

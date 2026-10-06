@@ -163,7 +163,7 @@ export function FAQ() {
     <section
       ref={sectionRef}
       id="faq"
-      className="relative overflow-hidden bg-navy text-cream section-dark-start pt-50 bottom-[-1px]"
+      className="relative overflow-hidden bg-navy text-cream section-dark-start bottom-[-1px]"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="faq-content max-w-5xl">

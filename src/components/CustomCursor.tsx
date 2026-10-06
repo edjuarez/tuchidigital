@@ -70,8 +70,8 @@ export function CustomCursor() {
 
     const handleEnter = () => {
       gsap.to(follower, {
-        width: 72,
-        height: 72,
+        width: 100,
+        height: 100,
         borderColor: "#55D6FF",
         backgroundColor: "rgba(85, 214, 255, 0.08)",
         boxShadow: "0 0 30px rgba(85, 214, 255, 0.25)",
@@ -94,8 +94,8 @@ export function CustomCursor() {
 
     const handleLeave = () => {
       gsap.to(follower, {
-        width: 40,
-        height: 40,
+        width: 80,
+        height: 80,
         borderColor: "rgba(85, 214, 255, 0.5)",
         backgroundColor: "transparent",
         boxShadow: "none",
@@ -144,11 +144,11 @@ export function CustomCursor() {
     <>
       <div
         ref={followerRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#55D6FF]/50"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#55D6FF]"
       >
         <span
           ref={labelRef}
-          className="scale-50 text-sm text-[#55D6FF] opacity-0"
+          className="scale-50 text-xl text-[#55D6FF]/60 opacity-0"
         >
           +
         </span>
@@ -156,7 +156,7 @@ export function CustomCursor() {
 
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed left-0 top-0 z-[10000] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#55D6FF]"
+        className="pointer-events-none fixed left-0 top-0 z-[10000] h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#55D6FF]"
       />
     </>
   );

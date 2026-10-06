@@ -8,6 +8,11 @@
   --color-cream: #f5f3ee;
   --color-cyan: #55d6ff;
   --color-white: #ffffff;
+  --color-bluecards: #588fff;
+  --color-violet: #A78BFA;
+  --color-lime: #B7F34A;
+  --color-coral: #FF6B4A;
+  --color-yellow: #FFD166;
 }
 
 @layer components {
@@ -45,6 +50,10 @@
 
   .section-description-dark {
     @apply text-[#102A43]/65;
+  }
+
+  .highlited-text {
+    @apply font-momo text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl lg:text-8xl;
   }
 }
 

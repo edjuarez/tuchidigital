@@ -2,15 +2,14 @@ export default function Navbar() {
   const links = [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Proyectos", href: "#proyectos" },
     { label: "Proceso", href: "#proceso" },
-    { label: "Packs", href: "#packs" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Packs", href: "#packs" }
   ];
 
   return (
     <header className="animate-[slideDown_0.7s_ease-out] fixed top-0 left-0 z-50 w-full bg-navy">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <a
           href="#inicio"
           className="font-momo text-xl tracking-[-0.04em] text-white"
