@@ -128,7 +128,7 @@ export function Intro() {
             Creamos tu presencia
             <br />
             digital de manera{" "}
-            <span className="text-[#55D6FF]">profesional.</span>
+            <span className="text-cyan">profesional.</span>
           </h2>
 
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#102A43]/65 md:text-xl">
@@ -145,14 +145,14 @@ export function Intro() {
 
             return (
               <div key={feature.title} className="intro-feature relative flex h-full">
-                <div className="absolute -bottom-3 -right-3 h-full w-full bg-[#102A43]" />
+                <div className="absolute -bottom-1 -right-1 h-full w-full bg-cyan" />
 
                 <article
-                  className="group relative z-10 flex h-full w-full flex-col  border-[#102A43] bg-cyan p-7 transition-colors duration-300 hover:bg-[#102A43] hover:text-[#F5F3EE] md:p-8"
+                  className="group relative z-10 flex h-full w-full flex-col border-1 border-cyan hover:bg-white p-7 transition-colors duration-300 bg-[#102A43] hover:text-navy text-[#F5F3EE] md:p-8"
                 >
                   <div className="flex items-start justify-between">
                     <Icon
-                      className="text-4xl text-white transition-transform duration-300 group-hover:scale-110"
+                      className="text-4xl hover:text-white transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={2}
                     />
                   </div>
@@ -161,7 +161,7 @@ export function Intro() {
                     {feature.title}
                   </h3>
 
-                  <p className="mt-4 text-base leading-relaxed text-[#102A43] transition-colors duration-300 group-hover:text-[#F5F3EE]/60">
+                  <p className="mt-4 text-base transition-colors duration-300">
                     {feature.description}
                   </p>
 

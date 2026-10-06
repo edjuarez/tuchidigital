@@ -61,39 +61,39 @@ export function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative overflow-hidden bg-navy text-cream"
+      className="relative overflow-hidden bg-[#F5F3EE] text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="grid gap-20 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
           <div className="contact-content">
-            <span className="section-eyebrow section-eyebrow-light">
+            <span className="section-eyebrow section-eyebrow-dark">
               Contacto
             </span>
 
-            <h2 className="section-header section-header-light mt-6">
-              Hablemos de
+            <h2 className="section-header section-header-dark mt-6">
+              Hablemos de tu
               <br />
-              tu proyecto.
+               <span className="text-violet">proyecto.</span>
             </h2>
 
-            <p className="section-description section-description-light mt-8">
+            <p className="section-description section-description-dark mt-8">
               Cuéntanos qué tienes en mente, qué necesitas y qué objetivos
               quieres conseguir. Analizaremos tu proyecto y nos pondremos en
               contacto contigo para hablar de los próximos pasos.
             </p>
 
-            <div className="mt-12 border-t border-cream/15 pt-6">
-              <p className="font-mono text-base uppercase tracking-[0.15em] text-cream/45">
+            <div className="mt-12 border-t border-[#102A43]/15 pt-6">
+              <p className="font-mono text-base uppercase tracking-[0.15em] text-[#102A43]/45">
                 ¿Tienes una idea?
               </p>
 
-              <p className="mt-2 text-base text-cream/70">
+              <p className="mt-2 text-base text-[#102A43]/70">
                 Estamos preparados para llevarla a la web.
               </p>
             </div>
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form border-[5px] border-[#102A43] bg-[#102A43] p-6 md:p-8 lg:p-10">
             <div className="grid gap-8 md:grid-cols-2">
               <div className="group">
                 <label
@@ -130,6 +130,23 @@ export function Contact() {
                   placeholder="tu@email.com"
                 />
               </div>
+            </div>
+
+            <div className="mt-8">
+              <label
+                htmlFor="phone"
+                className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+              >
+                Teléfono
+              </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                className="mt-3 w-full border-b border-cream/20 bg-transparent py-4 text-2xl text-cream outline-none transition-colors duration-300 placeholder:text-cream/25 focus:border-cyan"
+                placeholder="+34 600 000 000"
+              />
             </div>
 
             <div className="mt-8">

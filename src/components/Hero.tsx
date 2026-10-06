@@ -280,7 +280,7 @@ export function Hero() {
             >
               <li
                 data-intensity="0.8"
-                className="hero-benefit absolute left-[-4%] top-[5%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+                className="hero-benefit absolute left-[-4%] top-[15%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
                 <span>Sitios web a medida</span>

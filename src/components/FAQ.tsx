@@ -196,8 +196,8 @@ export function FAQ() {
                 className="group flex w-full items-center gap-6 py-7 text-left md:py-9"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-mono text-xs text-cyan">
-                  0{index + 1}
+                <span className="font-mono text-4xl text-cyan">
+                  0{index + 1}.
                 </span>
 
                 <span className="flex-1 font-momo text-xl leading-tight tracking-[-0.03em] md:text-3xl">

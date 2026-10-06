@@ -15,11 +15,11 @@ const team = [
     role: "Marketing Director",
     image: "/team/vicky.webp",
   },
-/*   {
+  {
     name: "Angie",
     role: "Creative Director",
-    image: "/team/angie.webp",
-  }, */
+    image: "/team/angi.webp",
+  },
 ];
 
 export function Team() {
@@ -98,7 +98,7 @@ export function Team() {
           <h2 className="section-header section-header-dark mt-6">
             Personas detrás
             <br />
-            de cada <span className="text-lime">proyecto.</span>
+            de cada <span className="text-violet">proyecto.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
@@ -108,7 +108,7 @@ export function Team() {
         </div>
 
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 md:gap-8">
+          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-3 md:gap-8">
             {team.map((member) => (
               <article
                 key={member.name}

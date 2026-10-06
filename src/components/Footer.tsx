@@ -79,12 +79,12 @@ export function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative overflow-hidden bg-[#102A43] text-[#F5F3EE] pt-20"
+      className="relative overflow-hidden bg-[#102A43] text-[#F5F3EE] pb-30"
     >
-      <div
+{/*       <div
         ref={backgroundRef}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-[-10%]"
+        className="pointer-events-none absolute inset-[-0%]"
       >
         <div className="absolute left-[55%] top-[10%] h-[45vw] w-[45vw] rounded-full border border-white/[0.08]" />
         <div className="absolute left-[60%] top-[16%] h-[32vw] w-[32vw] rounded-full border border-white/[0.06]" />
@@ -94,14 +94,14 @@ export function Footer() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgba(255,255,255,0.08),transparent_32%)]" />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(85,214,255,0.12),transparent_28%)]" />
-      </div>
+      </div> */}
 
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px]"
       />
 
-      <div className="relative z-10 flex min-h-svh flex-col px-6 py-20 md:px-10 md:py-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-20 lg:px-16">
         <div className="footer-content flex flex-1 flex-col justify-between">
           <div className="grid gap-16 pt-10 md:grid-cols-[1.5fr_0.7fr_0.8fr] md:pt-16">
             <div>
@@ -110,17 +110,19 @@ export function Footer() {
                 className="group inline-block"
               >
                 <div className="font-momo text-[5rem] leading-[0.8] md:text-[8rem] lg:text-[7rem]">
-                  <span>tuchi</span>
-                  <br />
-                  <span
-                    className="text-[#55D6FF] transition-all duration-500 group-hover:text-[#F5F3EE]"
-                    style={{
-                      textShadow:
-                        "0 0 10px rgba(85,214,255,0.7), 0 0 30px rgba(85,214,255,0.4), 0 0 60px rgba(85,214,255,0.2)",
-                    }}
-                  >
-                    digital
-                  </span>
+                    <h1 className="hero-title font-momo text-6xl leading-[0.85] tracking-[-0.055em] md:text-[7rem]">
+                        <span>tuchi</span>
+                        <br />
+                        <span
+                            className="text-[#55D6FF]"
+                            style={{
+                                textShadow:
+                                "0 0 10px rgba(85,214,255,0.7), 0 0 30px rgba(85,214,255,0.4), 0 0 60px rgba(85,214,255,0.2)",
+                            }}
+                            >
+                            digital
+                        </span>
+                    </h1>
                 </div>
               </a>
             </div>
@@ -176,34 +178,6 @@ export function Footer() {
                 LinkedIn
               </a>
             </div>
-          </div>
-
-          <div className="mt-20 border-t border-[#F5F3EE]/15 pt-6">
-{/*             <div className="flex flex-col gap-4 font-mono text-[10px] uppercase tracking-[0.15em] text-[#F5F3EE]/35 md:flex-row md:items-center md:justify-between">
-              <span>
-                Tuchi Digital
-              </span>
-
-              <span>
-                © 2026 Todos los derechos reservados
-              </span>
-
-              <div className="flex gap-6">
-                <a
-                  href="#"
-                  className="transition-colors duration-300 hover:text-[#55D6FF]"
-                >
-                  Privacidad
-                </a>
-
-                <a
-                  href="#"
-                  className="transition-colors duration-300 hover:text-[#55D6FF]"
-                >
-                  Legal
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
