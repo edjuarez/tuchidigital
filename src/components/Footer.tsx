@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 const navigation = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#introduction" },
-  { label: "Proyectos", href: "#portfolio" },
   { label: "Proceso", href: "#proceso" },
+  { label: "Proyectos", href: "#portfolio" },
   { label: "Contacto", href: "#contact" },
 ];
 
@@ -155,7 +155,7 @@ export function Footer() {
                   href="tel:+34000000000"
                   className="text-lg text-[#F5F3EE]/75 transition-colors duration-300 hover:text-[#55D6FF]"
                 >
-                  +34 000 000 000
+                  +34 617 913 802
                 </a>
 
                 <a

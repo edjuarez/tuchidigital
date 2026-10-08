@@ -60,7 +60,7 @@ export function Contact() {
   return (
     <section
       ref={sectionRef}
-      id="contact"
+      id="contacto"
       className="relative overflow-hidden bg-[#F5F3EE] text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">

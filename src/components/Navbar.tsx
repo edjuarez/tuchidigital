@@ -1,10 +1,10 @@
 export default function Navbar() {
   const links = [
     { label: "Inicio", href: "#inicio" },
-    { label: "Servicios", href: "#servicios" },
+    { label: "Servicios", href: "#introduction" },
     { label: "Proceso", href: "#proceso" },
-    { label: "Proyectos", href: "#proyectos" },
-    { label: "Packs", href: "#packs" }
+    { label: "Packs", href: "#packs" },
+    { label: "Proyectos", href: "#portfolio" },
   ];
 
   return (

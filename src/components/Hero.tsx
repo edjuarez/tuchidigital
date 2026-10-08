@@ -190,6 +190,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
+      id="inicio"
       className="relative min-h-svh overflow-hidden bg-[#102A43] py-20 pt-18 text-[#F5F3EE] section-dark-end"
     >
       <div

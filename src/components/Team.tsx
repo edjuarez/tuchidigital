@@ -13,7 +13,7 @@ const team = [
   },
   {
     name: "Vicky",
-    skill: "Marketing Specialist",
+    skill: "Digital Marketing Specialist",
     role: "Marketing Director",
     image: "/team/vicky.webp",
   },
