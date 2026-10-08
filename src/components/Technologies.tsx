@@ -238,7 +238,7 @@ export function Technologies() {
           </p>
         </div>
 
-        <div className="technology-wall mt-20 flex flex-wrap items-center justify-center gap-x-10 gap-y-12 md:gap-x-14 md:gap-y-14">
+        <div className="technology-wall mt-50 mb-30 flex flex-wrap items-center justify-center gap-x-10 gap-y-12 md:gap-x-14 md:gap-y-14">
           {technologies.map((technology) => {
             const Icon = technology.icon;
             const size = sizeClasses[technology.size as keyof typeof sizeClasses];

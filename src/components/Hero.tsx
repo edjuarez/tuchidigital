@@ -8,14 +8,14 @@ import { WebsiteMockup } from "./ui/WebsiteMockup";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const benefits = [
+/* const benefits = [
   "Sitios web a medida",
   "SEO",
   "Sin costo de mantenimiento",
   "Adaptados",
   "Enlaces a redes sociales",
   "Garantía de satisfacción",
-];
+]; */
 
 const services = ["WEB", "LANDINGS", "E-COMMERCE", "MARKETING DIGITAL"];
 
@@ -165,11 +165,11 @@ export function Hero() {
       });
 
       gsap.to(".hero-benefit", {
-        x: (index, target) => {
+        x: (_, target) => {
           const intensity = Number(target.dataset.intensity || 1);
           return x * -12 * intensity;
         },
-        y: (index, target) => {
+        y: (_, target) => {
           const intensity = Number(target.dataset.intensity || 1);
           return y * -8 * intensity;
         },
@@ -212,7 +212,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px]"
       />
 
-      <div className="relative z-10 flex min-h-svh items-center px-6 py-6 md:px-10 md:py-8 lg:px-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <main className="hero-content mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.20fr_0.85fr] lg:gap-12 xl:gap-20">
           <div className="w-full text-left">
             <h1 className="hero-title font-momo text-6xl leading-[0.85] tracking-[-0.055em] md:text-[7rem]">

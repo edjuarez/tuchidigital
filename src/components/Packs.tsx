@@ -135,7 +135,7 @@ export function Packs() {
     <section
       ref={sectionRef}
       id="packs"
-      className="relative overflow-hidden section-dark-start bg-[#102A43] text-[#F5F3EE] py-20 section-dark-end "
+      className="relative overflow-hidden section-dark-start bg-[#102A43] text-[#F5F3EE] section-dark-end "
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="packs-header mb-20 max-w-4xl md:mb-28">
@@ -146,7 +146,7 @@ export function Packs() {
           <h2 className="section-header section-header-light mt-6">
             Elegí cómo
             <br />
-            empezar.
+            <span className="text-yellow">empezar.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-white/60 md:text-2xl">
@@ -167,15 +167,36 @@ export function Packs() {
             >
               <div className="flex items-start justify-between">
                 <span
-                  className={`font-mono text-xs tracking-[0.2em] ${
+                  className={`font-mono text-5xl ${
                     index === 1 ? "text-[#102A43]/50" : "text-white/40"
                   }`}
                 >
-                  {pack.number}
+                  {pack.number}.
                 </span>
 
                 {index === 1 && (
-                  <span className="font-mono text-xs uppercase tracking-[0.15em]">
+                  <span
+                    className="
+                      absolute
+                      -right-3
+                      -top-5
+                      z-10
+                      border
+                      border-[#102A43]
+                      bg-[#D6B77A]
+                      px-5
+                      py-2.5
+                      font-mono
+                      text-sm
+                      font-bold
+                      uppercase
+                      tracking-[0.16em]
+                      text-[#102A43]
+                      shadow-[0_8px_20px_rgba(0,0,0,0.2)]
+                      transition-all
+                      duration-300
+                    "
+                  >
                     Recomendado
                   </span>
                 )}

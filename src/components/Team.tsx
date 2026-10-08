@@ -7,16 +7,19 @@ gsap.registerPlugin(ScrollTrigger);
 const team = [
   {
     name: "Edu",
+    skill: "Software Engineer",
     role: "CEO & Founder",
     image: "/team/edu.webp",
   },
   {
     name: "Vicky",
+    skill: "Marketing Specialist",
     role: "Marketing Director",
     image: "/team/vicky.webp",
   },
   {
     name: "Angie",
+    skill: "Software Engineer",
     role: "Creative Director",
     image: "/team/angi.webp",
   },
@@ -108,7 +111,7 @@ export function Team() {
         </div>
 
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-3 md:gap-8">
+          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-3 md:gap-30">
             {team.map((member) => (
               <article
                 key={member.name}
@@ -127,7 +130,11 @@ export function Team() {
                     {member.name}
                   </h3>
 
-                  <p className="mt-2 font-mono text-[1rem] uppercase tracking-[0.15em] text-[#102A43]/50">
+                  <p className="mt-2 font-mono text-[0.75rem] uppercase tracking-[0.15em] text-[#102A43]/50">
+                    {member.skill}
+                  </p>
+
+                  <p className="mt-2 font-mono text-[1rem] uppercase tracking-[0.15em] text-[#102A43]/80">
                     {member.role}
                   </p>
                 </div>

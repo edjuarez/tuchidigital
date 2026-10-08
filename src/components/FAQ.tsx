@@ -172,7 +172,7 @@ export function FAQ() {
           </span>
 
           <h2 className="section-header section-header-light mt-6">
-            Todo lo que necesitas
+            Todo lo que <span className="text-yellow">necesitas</span>
             <br />
             saber antes de empezar.
           </h2>

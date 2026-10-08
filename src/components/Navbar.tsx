@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="animate-[slideDown_0.7s_ease-out] fixed top-0 left-0 z-50 w-full bg-navy">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-3 px-6 md:px-10 lg:px-16">
         <a
           href="#inicio"
           className="font-momo text-xl tracking-[-0.04em] text-white"

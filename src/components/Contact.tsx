@@ -93,12 +93,12 @@ export function Contact() {
             </div>
           </div>
 
-          <form className="contact-form border-[5px] border-[#102A43] bg-[#102A43] p-6 md:p-8 lg:p-10">
+          <form className="contact-form border-[5px] border-[#102A43] bg-[#102A43] p-6 md:p-8 lg:p-10 text-white/80">
             <div className="grid gap-8 md:grid-cols-2">
               <div className="group">
                 <label
                   htmlFor="name"
-                  className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+                  className="font-mono text-base uppercase tracking-[0.15em]"
                 >
                   Nombre
                 </label>
@@ -116,7 +116,7 @@ export function Contact() {
               <div className="group">
                 <label
                   htmlFor="email"
-                  className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+                  className="font-mono text-base uppercase tracking-[0.15em]"
                 >
                   Email
                 </label>
@@ -135,7 +135,7 @@ export function Contact() {
             <div className="mt-8">
               <label
                 htmlFor="phone"
-                className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+                className="font-mono text-base uppercase tracking-[0.15em]"
               >
                 Teléfono
               </label>
@@ -152,7 +152,7 @@ export function Contact() {
             <div className="mt-8">
               <label
                 htmlFor="company"
-                className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+                className="font-mono text-base uppercase tracking-[0.15em]"
               >
                 Empresa
               </label>
@@ -169,7 +169,7 @@ export function Contact() {
             <div className="mt-8">
               <label
                 htmlFor="project"
-                className="font-mono text-base uppercase tracking-[0.15em] text-cream/50"
+                className="font-mono text-base uppercase tracking-[0.15em]"
               >
                 Tipo de proyecto
               </label>
@@ -179,7 +179,7 @@ export function Contact() {
                 name="project"
                 required
                 defaultValue=""
-                className="mt-3 w-full border-b border-cream/20 bg-navy py-4 text-2xl text-cream outline-none transition-colors duration-300 focus:border-cyan"
+                className="mt-3 w-full border-b border-cream/20 bg-navy py-4 text-2xl outline-none transition-colors duration-300 focus:border-cyan"
               >
                 <option value="" disabled>
                   Selecciona una opción
@@ -194,7 +194,7 @@ export function Contact() {
             <div className="mt-8">
               <label
                 htmlFor="message"
-                className="font-mono text-xs uppercase tracking-[0.15em] text-cream/50"
+                className="font-mono text-base uppercase tracking-[0.15em]"
               >
                 Cuéntanos sobre tu proyecto
               </label>

@@ -150,7 +150,7 @@ export function Clients() {
                       : "md:right-0"
                   }`}
                 >
-                  <div className="flex min-h-12 items-center">
+{/*                   <div className="flex min-h-12 items-center">
                     {project.logo ? (
                       <img
                         src={project.logo}
@@ -162,7 +162,7 @@ export function Clients() {
                         {project.name}
                       </span>
                     )}
-                  </div>
+                  </div> */}
 
                   <h3 className="mt-8 font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl">
                     {project.name}
