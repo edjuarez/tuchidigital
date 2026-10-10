@@ -1,3 +1,4 @@
+import { FaWhatsapp } from "react-icons/fa";
 export default function Navbar() {
   const links = [
     { label: "Inicio", href: "#inicio" },
@@ -28,12 +29,21 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-
+{/* <a
+  href="https://wa.me/TU_NUMERO"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp"
+  className="inline-flex items-center gap-2 bg-[#55D6FF] px-2 py-2 text-sm font-medium text-black transition-transform hover:scale-105"
+>
+  <span>617 913 802</span>
+  <FaWhatsapp size={20} aria-hidden="true" />
+</a> */}
         <a
           href="#contacto"
           className="rounded-full bg-[#55D6FF] px-5 py-2.5 text-sm font-medium text-black transition-transform hover:scale-105"
         >
-          Hablemos
+          Quiero mi web
         </a>
       </nav>
     </header>

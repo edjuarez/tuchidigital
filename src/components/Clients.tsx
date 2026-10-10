@@ -172,13 +172,9 @@ export function Clients() {
                     {project.description}
                   </p>
 
-                  <div className="mt-10 flex items-center justify-between border-t border-[#F5F3EE]/15 pt-6">
-                    <span className="font-mono text-xs uppercase tracking-[0.15em] text-[#F5F3EE]/70 transition-colors duration-300 group-hover:text-[#55D6FF]">
+                  <div className="mt-10 border-t border-[#F5F3EE]/15 pt-6">
+                    <span className="flex w-full items-center justify-center border border-[#55D6FF]/40 px-5 py-4 font-mono text-base uppercase tracking-[0.15em] text-[#F5F3EE]/70 transition-all duration-300 group-hover:border-[#55D6FF] group-hover:bg-[#55D6FF] group-hover:text-[#102A43]">
                       Visitar sitio
-                    </span>
-
-                    <span className="flex h-12 w-12 items-center justify-center border border-[#55D6FF]/40 text-xl text-[#55D6FF] transition-all duration-300 group-hover:border-[#55D6FF] group-hover:bg-[#55D6FF] group-hover:text-[#102A43]">
-                      ↗
                     </span>
                   </div>
 

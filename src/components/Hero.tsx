@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCheckCircle } from "react-icons/fa";
 import { WebsiteMockup } from "./ui/WebsiteMockup";
+import { ActionButton } from "./ui/ActionButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,11 +42,6 @@ export function Hero() {
       });
 
       intro
-        .from(".hero-brand", {
-          y: 20,
-          opacity: 0,
-          duration: 0.7,
-        })
         .from(
           ".hero-title",
           {
@@ -217,7 +213,7 @@ export function Hero() {
         <main className="hero-content mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.20fr_0.85fr] lg:gap-12 xl:gap-20">
           <div className="w-full text-left">
             <h1 className="hero-title font-momo text-6xl leading-[0.85] tracking-[-0.055em] md:text-[7rem]">
-              <span>tuchi </span>
+              <span>tuchi</span>
 
               <span
                 className="text-[#55D6FF]"
@@ -256,14 +252,12 @@ export function Hero() {
 
             <div className="mt-10 flex flex-col items-start gap-10">
               <div className="hero-actions">
-                <a
-                  href="#contacto"
-                  className="group inline-flex items-center gap-6 border border-[#55D6FF] bg-[#55D6FF] px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-[#102A43] transition-all duration-300 hover:bg-transparent hover:text-[#55D6FF]"
-                >
-                  <span>Pedir mi sitio ahora</span>
-                </a>
+                <ActionButton href="#contacto" variant="light">
+                  Pedir mi sitio ahora
+                </ActionButton>
               </div>
             </div>
+
           </div>
 
           <div className="relative flex w-full items-center justify-center lg:justify-end">
