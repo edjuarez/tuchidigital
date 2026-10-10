@@ -1,4 +1,3 @@
-import { FaWhatsapp } from "react-icons/fa";
 export default function Navbar() {
   const links = [
     { label: "Inicio", href: "#inicio" },
