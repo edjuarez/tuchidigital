@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
   "Garantía de satisfacción",
 ]; */
 
-const services = ["WEB", "LANDINGS", "E-COMMERCE", "MARKETING DIGITAL"];
+const services = ["SITIOS WEB", "LANDINGS", "TIENDAS ONLINE", "MARKETING DIGITAL"];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -211,12 +211,12 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <main className="hero-content mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.20fr_0.85fr] lg:gap-12 xl:gap-20">
-          <div className="w-full text-left">
-            <h1 className="hero-title font-momo text-6xl leading-[0.85] tracking-[-0.055em] md:text-[7rem]">
-              <span>tuchi</span>
+          <div className="w-full text-center lg:text-left">
+            <h1 className="hero-title font-momo text-[5.75rem] leading-[0.85] tracking-[-0.055em] md:text-[7rem]">
+              <span className="block md:inline">tuchi</span>
 
               <span
-                className="text-[#55D6FF]"
+                className="block text-[#55D6FF] md:inline"
                 style={{
                   textShadow:
                     "0 0 10px rgba(85,214,255,0.7), 0 0 30px rgba(85,214,255,0.4), 0 0 60px rgba(85,214,255,0.2)",
@@ -239,7 +239,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-start gap-x-8 gap-y-3 border-y border-white/15 py-5 md:gap-x-10">
+            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 border-y border-white/15 py-5 md:gap-x-10">
               {services.map((service) => (
                 <span
                   key={service}
@@ -249,15 +249,11 @@ export function Hero() {
                 </span>
               ))}
             </div>
-
-            <div className="mt-10 flex flex-col items-start gap-10">
-              <div className="hero-actions">
-                <ActionButton href="#contacto" variant="light">
-                  Pedir mi sitio ahora
-                </ActionButton>
-              </div>
+            <div className="hero-actions mt-10">
+              <ActionButton href="#contacto" variant="light">
+                Pedir mi sitio ahora
+              </ActionButton>
             </div>
-
           </div>
 
           <div className="relative flex w-full items-center justify-center lg:justify-end">
@@ -271,7 +267,7 @@ export function Hero() {
 
             <ul
               ref={benefitsRef}
-              className="pointer-events-none absolute inset-0 z-20 hidden lg:block"
+              className="pointer-events-none absolute inset-0 z-20 block"
             >
               <li
                 data-intensity="0.8"
@@ -291,7 +287,7 @@ export function Hero() {
 
               <li
                 data-intensity="0.7"
-                className="hero-benefit absolute bottom-[8%] left-[-6%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
+                className="hero-benefit absolute bottom-[15%] left-[-6%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
                 <span>Sin costo de mantenimiento</span>
