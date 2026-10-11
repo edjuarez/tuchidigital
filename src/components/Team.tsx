@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaLocationArrow } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,13 +110,12 @@ export function Team() {
             red de una manera clara, estratégica y profesional.
           </p>
         </div>
-
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-3 md:gap-30">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="grid grid-cols-1 justify-items-center gap-12 md:grid-cols-3 md:gap-16">
             {team.map((member) => (
               <article
                 key={member.name}
-                className="team-member group w-full max-w-[320px]"
+                className="team-member group w-full max-w-[240px] md:max-w-[260px]"
               >
                 <div className="aspect-[4/4.5] w-full overflow-hidden bg-[#F5F3EE]">
                   <img
@@ -141,6 +141,15 @@ export function Team() {
               </article>
             ))}
           </div>
+        </div>
+        <div className="mt-20 flex justify-center">
+            <a
+              href="#contacto"
+              className="group mt-10 inline-flex items-center gap-4 px-7 py-4 font-mono text-base uppercase tracking-[0.15em] bg-navy text-white transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-cyan disabled:cursor-wait disabled:opacity-60"
+            >
+              Contactar al equipo
+              <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
         </div>
       </div>
     </section>

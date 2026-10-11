@@ -144,7 +144,7 @@ export function CustomCursor() {
     <>
       <div
         ref={followerRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#55D6FF]"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#55D6FF] md:flex"
       >
         <span
           ref={labelRef}
@@ -156,7 +156,7 @@ export function CustomCursor() {
 
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed left-0 top-0 z-[10000] h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#55D6FF]"
+        className="pointer-events-none fixed left-0 top-0 z-[10000] hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#55D6FF] md:block"
       />
     </>
   );

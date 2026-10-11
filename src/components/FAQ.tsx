@@ -17,14 +17,29 @@ const faqs = [
       "El tiempo depende del tipo y alcance del proyecto. Una web sencilla puede estar lista en pocos días, mientras que una tienda online o un proyecto más personalizado requiere más tiempo de desarrollo y revisión.",
   },
   {
+    question: "¿Mi web se vera bien en dispositivos móviles?",
+    answer:
+      "Sí, todas nuestras webs están diseñadas para ser completamente responsivas y ofrecer una excelente experiencia en todos los dispositivos, desde ordenadores hasta teléfonos inteligentes.",
+  },
+  {
+    question: "¿Podre tener botones whatsapp y redes sociales en mi web?",
+    answer:
+      "Sí, podemos integrar botones de contacto y enlaces a tus redes sociales directamente en tu web que estan incluidos en todos nuestros packs. Esto facilita la comunicación con tus clientes y mejora la interacción con tu marca.",
+  },
+  {
     question: "¿El dominio y el hosting están incluidos?",
     answer:
-      "Dependiendo del pack contratado, podemos incluir el dominio y el hosting inicial. También podemos trabajar con servicios que ya tengas contratados y ayudarte con su configuración.",
+      "Si, el dominio y el hosting están incluidos en todos nuestros packs. Se renuevan anualmente y te proporcionamos toda la información necesaria para gestionarlos sin complicaciones.",
   },
   {
     question: "¿Puedo modificar el contenido de mi web después?",
     answer:
       "Sí. Dependiendo del proyecto, podemos incorporar un panel de administración para que puedas gestionar contenidos, productos u otra información sin necesidad de modificar el código.",
+  },
+  {
+    question: "Tengo que saber programar para modificar mi web?",
+    answer:
+      "No, no necesitas conocimientos de programación. El panel de administración que implementamos es intuitivo y fácil de usar, permitiéndote actualizar textos, imágenes y otros contenidos de manera sencilla.",
   },
   {
     question: "¿Ofrecen mantenimiento y soporte después de publicar la web?",

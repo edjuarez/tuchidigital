@@ -124,7 +124,7 @@ export function Clients() {
             >
               <div className="relative">
                 <div
-                  className={`relative overflow-hidden bg-[#F5F3EE] ${
+                  className={`relative overflow-hidden bg-white ${
                     index % 2 === 1
                       ? "md:ml-16 lg:ml-24"
                       : "md:mr-16 lg:mr-24"
@@ -136,10 +136,6 @@ export function Clients() {
                       alt={project.name}
                       className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
-
-                    <span className="absolute left-6 top-6 font-mono text-xs tracking-[0.2em] text-[#102A43]/50 md:left-8 md:top-8">
-                      {project.number}
-                    </span>
                   </div>
                 </div>
 
@@ -163,7 +159,6 @@ export function Clients() {
                       </span>
                     )}
                   </div> */}
-
                   <h3 className="mt-8 font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl">
                     {project.name}
                   </h3>

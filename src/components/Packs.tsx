@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaCheckCircle } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +22,7 @@ const packs = [
       "Botones a redes sociales",
       "Formulario de contacto sencillo",
       "SEO inicial",
+      "Hosting y dominio gratis por 1 año",
     ],
     note: "Ideal para profesionales, autónomos y pequeños negocios.",
     button: "Pedir pack",
@@ -42,6 +44,7 @@ const packs = [
       "Formulario de contacto completo",
       "SEO inicial",
       "Integración con Google Analytics",
+      "Hosting y dominio gratis por 1 año",
     ],
     note:
       "Para negocios que necesitan una presencia digital más completa.",
@@ -55,6 +58,7 @@ const packs = [
     price: "850 €",
     duration: "Lista en 15–20 días",
     items: [
+      "Todo lo incluido en el pack Landing Pro",
       "Diseño personalizado",
       "Catálogo de productos",
       "Carrito de compras",
@@ -63,7 +67,7 @@ const packs = [
       "Gestión de productos y pedidos",
       "Panel de administración",
       "Diseño responsive",
-      "SEO inicial",
+      "Hosting y dominio gratis por 1 año",
     ],
     note: "Para negocios que quieren empezar a vender online.",
     button: "Pedir pack",
@@ -248,17 +252,16 @@ export function Packs() {
                   {pack.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-3 text-sm leading-relaxed"
+                      className="flex items-start gap-3 text-base leading-relaxed"
                     >
-                      <span
-                        className={`mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border text-[9px] ${
+                      <FaCheckCircle
+                        className={`mt-1 shrink-0 ${
                           isRecommended
-                            ? "border-[#102A43]/40"
-                            : "border-[#55D6FF]/60 text-[#55D6FF]"
+                            ? "text-[#102A43]"
+                            : "text-[#55D6FF]"
                         }`}
-                      >
-                        ✓
-                      </span>
+                        size={20}
+                      />
 
                       <span
                         className={
@@ -274,13 +277,21 @@ export function Packs() {
                 </ul>
 
                 <p
-                  className={`mt-8 min-h-12 text-xs leading-relaxed ${
+                  className={`mt-8 min-h-12 text-base leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/50"
                       : "text-white/40"
                   }`}
                 >
                   {pack.note}
+                </p>
+
+                <p className={`mt-4 text-xs leading-relaxed ${
+                    isRecommended
+                      ? "text-[#102A43]/50"
+                      : "text-white/40"
+                  }`}>
+                  Precio final. No incluye IVA ni gastos de dominio y hosting.
                 </p>
 
                 <a
@@ -301,14 +312,14 @@ export function Packs() {
         <article className="maintenance-card mt-8 border border-[#55D6FF]/40 bg-white/[0.03] p-7 md:p-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4 w-full">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#55D6FF]">
                   Servicio adicional
                 </span>
 
                 <span className="h-px w-12 bg-white/20" />
 
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+                <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-lime">
                   Mantenimiento mensual
                 </span>
               </div>
@@ -376,7 +387,7 @@ export function Packs() {
 
                 <span className="h-px w-12 bg-white/20" />
 
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+                <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-coral">
                   Marketing digital
                 </span>
               </div>
