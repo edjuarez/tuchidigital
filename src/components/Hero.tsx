@@ -9,15 +9,6 @@ import { ActionButton } from "./ui/ActionButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* const benefits = [
-  "Sitios web a medida",
-  "SEO",
-  "Sin costo de mantenimiento",
-  "Adaptados",
-  "Enlaces a redes sociales",
-  "Garantía de satisfacción",
-]; */
-
 const services = ["SITIOS WEB", "LANDINGS", "TIENDAS ONLINE", "MARKETING DIGITAL"];
 
 export function Hero() {
