@@ -10,7 +10,7 @@ const navigation = [
   { label: "Proceso", href: "#proceso" },
   { label: "Packs", href: "#packs" },
   { label: "Proyectos", href: "#portfolio" },
-  { label: "Contacto", href: "#contact" },
+  { label: "Contacto", href: "#contacto" },
 ];
 
 export function Footer() {
@@ -153,10 +153,15 @@ export function Footer() {
 
               <div className="mt-6 flex flex-col gap-4">
                 <a
-                  href="tel:+34000000000"
+                  href={`https://wa.me/+34617913802?text=${encodeURIComponent(
+                  "¡Hola! Vi la web de Tuchi Digital y me gustaría consultar sobre un proyecto web."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contactar por WhatsApp"
                   className="text-lg text-[#F5F3EE]/75 transition-colors duration-300 hover:text-[#55D6FF]"
                 >
-                  +34 617 913 802
+                +34 617 913 802
                 </a>
 
                 <a
@@ -171,12 +176,12 @@ export function Footer() {
                 </span>
               </div>
 
-              <a
+{/*               <a
                 href="#"
                 className="mt-8 inline-flex border border-[#F5F3EE]/20 px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] transition-all duration-300 hover:border-[#55D6FF] hover:bg-[#55D6FF] hover:text-[#102A43]"
               >
                 LinkedIn
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

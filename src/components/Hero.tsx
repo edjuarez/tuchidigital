@@ -1,15 +1,14 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCheckCircle } from "react-icons/fa";
 import { WebsiteMockup } from "./ui/WebsiteMockup";
 import { ActionButton } from "./ui/ActionButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = ["SITIOS WEB", "LANDINGS", "TIENDAS ONLINE", "MARKETING DIGITAL"];
+const services = ["SITIOS WEB", "LANDINGS", "TIENDAS ONLINE", "MARKETING DIGITAL", "SEO", "MANTENIMIENTO"];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -243,6 +242,7 @@ export function Hero() {
             <div className="hero-actions mt-10">
               <ActionButton href="#contacto" variant="light">
                 Pedir mi sitio ahora
+                <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </ActionButton>
             </div>
           </div>

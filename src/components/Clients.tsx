@@ -159,7 +159,6 @@ export function Clients() {
                       </span>
                     )}
                   </div> */}
-
                   <h3 className="mt-8 font-momo text-4xl leading-[0.9] tracking-[-0.04em] md:text-5xl">
                     {project.name}
                   </h3>

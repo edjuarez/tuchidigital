@@ -2,10 +2,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
 
-console.log("API CONTACT CARGADA");
-console.log("RESEND_API_KEY existe:", Boolean(process.env.RESEND_API_KEY));
-console.log("CONTACT_EMAIL existe:", Boolean(process.env.CONTACT_EMAIL));
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const projectLabels: Record<string, string> = {
