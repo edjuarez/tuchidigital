@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FiArrowUpRight, FiMail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import { FaLocationArrow } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
