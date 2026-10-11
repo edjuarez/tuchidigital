@@ -12,6 +12,7 @@ export default function Navbar() {
     { label: "Proceso", href: "#proceso" },
     { label: "Packs", href: "#packs" },
     { label: "Proyectos", href: "#portfolio" },
+    { label: "Contacto", href: "#contacto" },
   ];
 
   const closeMenu = () => setIsOpen(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[1.2rem] text-white transition-colors hover:text-[#55D6FF]"
+              className="text-[1rem] font-bold hover:text-[#55D6FF] text-white transition-colors"
             >
               {link.label}
             </a>
