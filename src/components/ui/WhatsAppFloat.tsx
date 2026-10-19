@@ -2,7 +2,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
 
 export function WhatsAppFloat() {
   const buttonRef = useRef<HTMLAnchorElement>(null);
