@@ -106,7 +106,7 @@ export function Team() {
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
-            Un equipo de profesionales encargados de llevar tu visión a la
+            En tuchi digital tenemos un equipo de profesionales encargados de llevar tu visión a la
             red de una manera clara, estratégica y profesional.
           </p>
         </div>

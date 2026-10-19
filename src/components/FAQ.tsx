@@ -46,6 +46,11 @@ const faqs = [
     answer:
       "Sí. Ofrecemos un servicio de mantenimiento y soporte para realizar cambios, actualizar contenidos, incorporar nuevas funcionalidades, revisar el funcionamiento técnico y seguir evolucionando el sitio.",
   },
+  {
+    question: "¿Tengo acceso al código fuente de mi web?",
+    answer:
+      "Sí, en cuanto la web este lista te compartiremos un repositorio privado con todo el código fuente y los archivos del proyecto. Esto te permite tener control total sobre tu web y la posibilidad de hacer cambios o migrarla si lo deseas.", 
+  }
 ];
 
 export function FAQ() {
