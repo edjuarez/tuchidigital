@@ -10,10 +10,12 @@ import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import Navbar from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { WhatsAppFloat } from "./components/ui/WhatsAppFloat";
 
 function App() {
   return (
     <>
+      <WhatsAppFloat />
       <CustomCursor />
       <Navbar />
       <Hero />

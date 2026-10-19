@@ -89,7 +89,7 @@ const maintenance = {
 };
 
 const marketing = {
-  price: "150 €",
+  price: "250 €",
   items: [
     "Planificación mensual de contenido",
     "Diseño de publicaciones",
@@ -173,7 +173,7 @@ export function Packs() {
           <h2 className="section-header section-header-light mt-6">
             Tu negocio,
             <br />
-            <span className="text-yellow">listo para crecer.</span>
+            listo para <span className="text-yellow">crecer.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-white/60 md:text-2xl">
