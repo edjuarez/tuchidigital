@@ -89,7 +89,7 @@ export function WhatsAppFloat() {
     <div className="fixed bottom-6 right-6 z-[100] flex items-center gap-3 md:bottom-8 md:right-8">
       <span
         ref={labelRef}
-        className="pointer-events-none absolute right-[calc(100%+12px)] whitespace-nowrap border border-[#55D6FF]/30 bg-[#102A43] px-4 py-3 font-mono text-[1.20rem] uppercase tracking-[0.15em] text-[#F5F3EE] shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+        className="pointer-events-none absolute right-[calc(100%+12px)] whitespace-nowrap border border-[#55D6FF]/30 bg-[#102A43] px-4 py-3 text-[1.20rem] font-momo tracking-[0.15em] text-[#F5F3EE] shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
       >
         ¡Hablemos!
       </span>
@@ -100,7 +100,7 @@ export function WhatsAppFloat() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar con Tuchi Digital por WhatsApp"
-        className="group relative flex h-16 w-16 items-center justify-center border border-[#55D6FF] bg-[#102A43] text-[#55D6FF] shadow-[0_8px_30px_rgba(16,42,67,0.25)] transition-colors duration-300 hover:bg-[#55D6FF] hover:text-[#102A43] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#55D6FF] md:h-[72px] md:w-[72px]"
+        className="group relative flex h-16 w-16 items-center justify-center border border-[#55D6FF] hover:border-navy bg-[#102A43] text-[#55D6FF] shadow-[0_8px_30px_rgba(16,42,67,0.25)] transition-colors duration-300 hover:bg-[#55D6FF] hover:text-[#102A43] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#55D6FF] md:h-[72px] md:w-[72px]"
       >
         <FaWhatsapp className="text-[30px] transition-transform duration-300 group-hover:scale-110 md:text-[34px]" />
       </a>

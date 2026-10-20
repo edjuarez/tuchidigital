@@ -175,7 +175,7 @@ export function Intro() {
         <div className="intro-cta mt-12">
           <a
             href="#contacto"
-            className="group inline-flex items-center gap-6 border border-[#55D6FF] bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
+            className="group inline-flex items-center gap-6 border border-[#55D6FF] hover:border-navy bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
           >
             <span>Consulta tu proyecto</span>
           </a>

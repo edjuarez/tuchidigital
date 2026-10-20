@@ -20,7 +20,7 @@ export function ActionButton({
     light:
       "border-[#55D6FF] bg-[#55D6FF] text-[#102A43] hover:bg-transparent hover:text-[#55D6FF]",
     dark:
-      "border-[#102A43] bg-[#102A43] text-white hover:bg-transparent hover:text-[#102A43]",
+      "border-[#102A43] bg-[#102A43] hover:border-navy text-white hover:bg-transparent hover:text-[#102A43]",
   };
 
   const className = `${baseStyles} ${variants[variant]}`;
