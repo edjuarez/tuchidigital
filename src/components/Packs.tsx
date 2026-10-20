@@ -171,9 +171,12 @@ export function Packs() {
           </span>
 
           <h2 className="section-header section-header-light mt-6">
-            Tu negocio,
+{/*             Tu negocio,
             <br />
-            listo para <span className="text-yellow">crecer.</span>
+            listo para <span className="text-yellow">crecer.</span> */}
+            Elegí cómo
+            <br />
+            <span className="text-yellow">empezar.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-white/60 md:text-2xl">
@@ -206,7 +209,9 @@ export function Packs() {
                   </span>
 
                   {isRecommended && (
-                    <span className="absolute -right-11 -top-15 z-10 border border-[#102A43] bg-[#D6B77A] px-5 py-2.5 font-mono text-sm font-bold uppercase tracking-[0.16em] text-[#102A43] shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
+                    <span
+                      className="absolute -right-11 -top-11 z-10 border border-[#A57932] bg-[linear-gradient(160deg,#B88938_0%,#EBD59B_22%,#FFF1BD_38%,#D6B77A_55%,#B88938_78%,#E8CB83_100%)] px-5 py-2.5 font-mono text-sm font-bold uppercase tracking-[0.16em] text-[#102A43] shadow-[0_4px_8px_rgba(0,0,0,0.2),0_3px_8px_rgba(165,121,50,0.25),inset_0_-2px_4px_rgba(139,93,30,0.55),inset_0_1px_2px_rgba(255,245,205,0.95)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.22),0_5px_12px_rgba(165,121,50,0.35),inset_0_-2px_4px_rgba(139,93,30,0.4),inset_0_1px_2px_rgba(255,245,205,0.95)]"
+                    >
                       Recomendado
                     </span>
                   )}

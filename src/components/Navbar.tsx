@@ -1,7 +1,7 @@
-"use client";
 
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { ButtonCTA } from "./ui/ButtonCTA";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,19 +33,16 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[1rem] font-bold hover:text-[#55D6FF] text-white transition-colors"
+              className="text-[1rem] font-bold text-white transition-colors hover:text-[#55D6FF]"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <a
-          href="#contacto"
-          className="hidden rounded-full bg-[#55D6FF] px-5 py-2.5 text-sm font-medium text-black transition-transform hover:scale-105 md:inline-flex"
-        >
-          Quiero mi web
-        </a>
+        <div className="hidden md:block">
+          <ButtonCTA href="#contacto">Quiero mi web</ButtonCTA>
+        </div>
 
         <button
           type="button"
@@ -80,14 +77,14 @@ export default function Navbar() {
               </a>
             ))}
 
-            <a
-              href="#contacto"
-              onClick={closeMenu}
-              tabIndex={isOpen ? 0 : -1}
-              className="mt-5 rounded-full bg-[#55D6FF] px-5 py-3 text-center text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
-            >
-              Quiero mi web
-            </a>
+            <div className="mt-6 flex justify-start pb-4">
+              <ButtonCTA
+                href="#contacto"
+                className="w-full justify-center sm:w-auto"
+              >
+                Quiero mi web
+              </ButtonCTA>
+            </div>
           </div>
         </div>
       </nav>

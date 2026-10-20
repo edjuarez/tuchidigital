@@ -99,10 +99,8 @@ export function Team() {
             Nuestro equipo
           </span>
 
-          <h2 className="section-header section-header-dark mt-6">
-            Personas detrás
-            <br />
-            de cada <span className="text-violet">proyecto.</span>
+          <h2 className="section-header mt-6">
+            El equipo <br/>detrás de <br/>tuchi <span className="text-cyan">digital.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
@@ -145,7 +143,7 @@ export function Team() {
         <div className="mt-20 flex justify-center">
             <a
               href="#contacto"
-              className="group mt-10 inline-flex items-center gap-4 px-7 py-4 font-mono text-base uppercase tracking-[0.15em] bg-navy text-white transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-cyan disabled:cursor-wait disabled:opacity-60"
+              className="group mt-10 inline-flex items-center gap-4 px-7 py-4 font-mono text-base uppercase tracking-[0.15em] bg-navy text-white transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-navy disabled:cursor-wait disabled:opacity-60"
             >
               Contactar al equipo
               <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
