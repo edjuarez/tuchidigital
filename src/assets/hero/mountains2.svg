@@ -1,0 +1,91 @@
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 520"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="mountain-fill" x1="720" y1="0" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102A43" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#071522" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="neon-line" x1="0" y1="0" x2="1440" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55D6FF" stop-opacity="0.25" />
+      <stop offset="0.5" stop-color="#55D6FF" />
+      <stop offset="1" stop-color="#55D6FF" stop-opacity="0.35" />
+    </linearGradient>
+
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <clipPath id="mountain-clip">
+      <path d="M0 420 L120 330 L210 365 L360 160 L430 245 L520 285 L665 65 L735 170 L815 225 L950 110 L1030 205 L1110 280 L1225 175 L1320 290 L1440 220 V520 H0 Z" />
+    </clipPath>
+  </defs>
+
+  <g opacity="0.9">
+    <path
+      d="M0 420 L120 330 L210 365 L360 160 L430 245 L520 285 L665 65 L735 170 L815 225 L950 110 L1030 205 L1110 280 L1225 175 L1320 290 L1440 220 V520 H0 Z"
+      fill="url(#mountain-fill)"
+    />
+
+    <path
+      d="M0 420 L120 330 L210 365 L360 160 L430 245 L520 285 L665 65 L735 170 L815 225 L950 110 L1030 205 L1110 280 L1225 175 L1320 290 L1440 220"
+      stroke="#55D6FF"
+      stroke-width="2"
+      stroke-linejoin="round"
+      filter="url(#neon-glow)"
+    />
+  </g>
+
+  <g
+    clip-path="url(#mountain-clip)"
+    stroke="url(#neon-line)"
+    stroke-width="1"
+    opacity="0.8"
+  >
+    <path d="M-100 470 L665 65 L1540 470" />
+    <path d="M-100 500 L665 65 L1540 500" />
+    <path d="M-100 530 L665 65 L1540 530" />
+    <path d="M-100 560 L665 65 L1540 560" />
+
+    <path d="M-100 400 L360 160 L900 500" />
+    <path d="M-100 430 L360 160 L900 530" />
+    <path d="M-100 460 L360 160 L900 560" />
+
+    <path d="M400 500 L950 110 L1500 430" />
+    <path d="M400 530 L950 110 L1500 460" />
+    <path d="M400 560 L950 110 L1500 490" />
+
+    <path d="M-100 450 H1540" />
+    <path d="M-100 475 H1540" />
+    <path d="M-100 500 H1540" />
+    <path d="M-100 525 H1540" />
+  </g>
+
+  <g
+    stroke="#55D6FF"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    opacity="0.7"
+  >
+    <path d="M360 160 L300 330 L430 245" />
+    <path d="M665 65 L570 310 L735 170" />
+    <path d="M665 65 L815 225 L760 340" />
+    <path d="M950 110 L875 300 L1030 205" />
+    <path d="M1225 175 L1160 330 L1320 290" />
+  </g>
+
+  <path
+    d="M0 420 L120 330 L210 365 L360 160 L430 245 L520 285 L665 65 L735 170 L815 225 L950 110 L1030 205 L1110 280 L1225 175 L1320 290 L1440 220"
+    stroke="#55D6FF"
+    stroke-width="1"
+    opacity="0.35"
+  />
+</svg>

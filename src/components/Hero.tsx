@@ -5,6 +5,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { WebsiteMockup } from "./ui/WebsiteMockup";
 import { ActionButton } from "./ui/ActionButton";
 import { FaLocationArrow } from "react-icons/fa6";
+//import HeroMountains from "./ui/HeroMountains";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,7 +178,7 @@ export function Hero() {
     <section
       ref={heroRef}
       id="inicio"
-      className="relative min-h-svh overflow-hidden bg-[#102A43] py-20 pt-18 text-[#F5F3EE] section-dark-end"
+      className="relative min-h-svh overflow-hidden bg-[#102A43] pt-10 text-[#F5F3EE] section-dark-end"
     >
       <div
         ref={backgroundRef}
@@ -198,7 +199,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px]"
       />
-
+      {/* <HeroMountains /> */}
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <main className="hero-content mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-16 lg:grid-cols-[1.20fr_0.85fr] lg:gap-12 xl:gap-20">
           <div className="w-full text-center lg:text-left">
