@@ -1,0 +1,74 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" fill="none">
+  <defs>
+    <linearGradient id="mountain-fill" x1="0" y1="100" x2="0" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102A43" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#071522" stop-opacity="0.96"/>
+    </linearGradient>
+
+    <linearGradient id="neon-line" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55D6FF" stop-opacity="0.3"/>
+      <stop offset=".5" stop-color="#55D6FF"/>
+      <stop offset="1" stop-color="#55D6FF" stop-opacity=".3"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="terrain">
+      <path d="M0 330 L100 270 L190 325 L300 190 L390 275 L490 335 L590 240 L690 300 L790 180 L900 290 L1010 320 L1110 205 L1220 300 L1320 260 L1440 330 V520 H0 Z"/>
+    </clipPath>
+  </defs>
+
+  <path
+    d="M0 330 L100 270 L190 325 L300 190 L390 275 L490 335 L590 240 L690 300 L790 180 L900 290 L1010 320 L1110 205 L1220 300 L1320 260 L1440 330 V520 H0 Z"
+    fill="url(#mountain-fill)"
+  />
+
+  <g clip-path="url(#terrain)" stroke="url(#neon-line)" stroke-width="1" opacity=".75">
+    <path d="M-1440 390 L0 330 L1440 390 L2880 330"/>
+    <path d="M-1440 420 L0 360 L1440 420 L2880 360"/>
+    <path d="M-1440 450 L0 390 L1440 450 L2880 390"/>
+    <path d="M-1440 480 L0 420 L1440 480 L2880 420"/>
+    <path d="M-1440 510 L0 450 L1440 510 L2880 450"/>
+
+    <path d="M0 330 L300 520"/>
+    <path d="M100 270 L400 520"/>
+    <path d="M190 325 L490 520"/>
+    <path d="M300 190 L600 520"/>
+    <path d="M390 275 L690 520"/>
+    <path d="M490 335 L790 520"/>
+    <path d="M590 240 L890 520"/>
+    <path d="M690 300 L990 520"/>
+    <path d="M790 180 L1090 520"/>
+    <path d="M900 290 L1200 520"/>
+    <path d="M1010 320 L1310 520"/>
+    <path d="M1110 205 L1410 520"/>
+    <path d="M1220 300 L1520 520"/>
+    <path d="M1320 260 L1620 520"/>
+
+    <path d="M0 470 L300 190 L600 470"/>
+    <path d="M480 470 L790 180 L1100 470"/>
+    <path d="M840 470 L1110 205 L1380 470"/>
+  </g>
+
+  <path
+    d="M0 330 L100 270 L190 325 L300 190 L390 275 L490 335 L590 240 L690 300 L790 180 L900 290 L1010 320 L1110 205 L1220 300 L1320 260 L1440 330"
+    stroke="#55D6FF"
+    stroke-width="2"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <path
+    d="M0 330 L100 270 L190 325 L300 190 L390 275 L490 335 L590 240 L690 300 L790 180 L900 290 L1010 320 L1110 205 L1220 300 L1320 260 L1440 330"
+    stroke="#55D6FF"
+    stroke-width="1"
+    opacity=".55"
+  />
+</svg>
