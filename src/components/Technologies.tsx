@@ -254,7 +254,9 @@ export function Technologies() {
                 }
               >
                 <Icon
-                  className={`${size.icon} transition-all duration-300 group-hover:scale-110 aria-hidden="true" focusable="false"`}
+                  aria-hidden="true"
+                  focusable="false"
+                  className={`${size.icon} transition-all duration-300 group-hover:scale-110 `}
                   style={{ color: technology.color }}
                 />
 
