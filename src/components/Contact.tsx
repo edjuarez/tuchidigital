@@ -167,12 +167,12 @@ export function Contact() {
     </a>
 
     <a
-      href="mailto:edujuarezcba@gmail.com"
+      href="mailto:hola@tuchidigital.com"
       aria-label="Enviar un email"
       className="inline-flex items-center gap-3 border border-[#102A43]/20 px-5 py-4 text-sm text-[#102A43] transition-colors duration-300 hover:border-[#102A43] hover:bg-[#102A43]/5"
     >
       <FiMail className="text-xl" />
-      <span>edujuarezcba@gmail.com</span>
+      <span>hola@tuchidigital.com</span>
     </a>
   </div>
 </div>
