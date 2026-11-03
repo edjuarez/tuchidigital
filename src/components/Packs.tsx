@@ -174,7 +174,7 @@ export function Packs() {
 {/*             Tu negocio,
             <br />
             listo para <span className="text-yellow">crecer.</span> */}
-            Elegí cómo
+            Elije cómo
             <br />
             <span className="text-yellow">empezar.</span>
           </h2>
