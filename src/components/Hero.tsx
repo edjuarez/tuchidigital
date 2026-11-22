@@ -185,9 +185,9 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-[-10%]"
       >
-        <div className="absolute left-[55%] top-[15%] h-[45vw] w-[45vw] rounded-full border border-white/[0.09]" />
-        <div className="absolute left-[60%] top-[20%] h-[32vw] w-[32vw] rounded-full border border-white/[0.07]" />
-        <div className="absolute left-[66%] top-[26%] h-[20vw] w-[20vw] rounded-full border border-white/[0.06]" />
+        <div className="absolute left-[55%] top-[15%] h-[45vw] w-[45vw] rounded-full border border-cream/[0.09]" />
+        <div className="absolute left-[60%] top-[20%] h-[32vw] w-[32vw] rounded-full border border-cream/[0.07]" />
+        <div className="absolute left-[66%] top-[26%] h-[20vw] w-[20vw] rounded-full border border-cream/[0.06]" />
         <div className="absolute left-[70%] top-[30%] h-[10vw] w-[10vw] rounded-full bg-[#55D6FF]/10 blur-3xl" />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgba(255,255,255,0.09),transparent_32%)]" />
@@ -230,11 +230,11 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 border-y border-white/15 py-5 md:gap-x-10">
+            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 border-y border-cream/15 py-5 md:gap-x-10">
               {services.map((service) => (
                 <span
                   key={service}
-                  className="font-mono text-sm font-bold uppercase tracking-[0.2em] text-white/80 md:text-base"
+                  className="font-mono text-sm font-bold uppercase tracking-[0.2em] text-cream/80 md:text-base"
                 >
                   {service}
                 </span>

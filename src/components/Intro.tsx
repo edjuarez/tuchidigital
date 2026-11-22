@@ -149,11 +149,11 @@ export function Intro() {
                 <div className="absolute -bottom-1 -right-1 h-full w-full bg-cyan" />
 
                 <article
-                  className="group relative z-10 flex h-full w-full flex-col border-1 border-cyan hover:bg-white p-7 transition-colors duration-300 bg-[#102A43] hover:text-navy text-[#F5F3EE] md:p-8"
+                  className="group relative z-10 flex h-full w-full flex-col border-1 border-cyan hover:bg-cream p-7 transition-colors duration-300 bg-[#102A43] hover:text-navy text-[#F5F3EE] md:p-8"
                 >
                   <div className="flex items-start justify-between">
                     <Icon
-                      className="text-4xl hover:text-white transition-transform duration-300 group-hover:scale-110"
+                      className="text-4xl hover:text-cream transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={2}
                     />
                   </div>
@@ -176,7 +176,7 @@ export function Intro() {
         <div className="intro-cta mt-12">
           <a
             href="#contacto"
-            className="group inline-flex items-center gap-6 border border-[#55D6FF] hover:border-navy bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
+            className="group inline-flex items-center gap-6 border border-[#55D6FF] hover:border-navy bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-cream transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
           >
             <span>Consulta tu proyecto</span>
           </a>

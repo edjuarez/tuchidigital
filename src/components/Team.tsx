@@ -143,7 +143,7 @@ export function Team() {
         <div className="mt-20 flex justify-center">
             <a
               href="#contacto"
-              className="group mt-10 inline-flex items-center gap-4 px-7 py-4 text-base uppercase tracking-[0.15em] bg-navy text-white transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-navy disabled:cursor-wait disabled:opacity-60"
+              className="group mt-10 inline-flex items-center gap-4 px-7 py-4 text-base uppercase tracking-[0.15em] bg-navy text-cream transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-navy disabled:cursor-wait disabled:opacity-60"
             >
               Contactar al equipo
               <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />

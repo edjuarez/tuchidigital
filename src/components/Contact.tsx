@@ -160,7 +160,7 @@ export function Contact() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="inline-flex items-center gap-3 border border-[#102A43] bg-[#102A43] px-5 py-4 text-sm text-white transition-colors duration-300 hover:bg-[#183D5C]"
+      className="inline-flex items-center gap-3 border border-[#102A43] bg-[#102A43] px-5 py-4 text-sm text-cream transition-colors duration-300 hover:bg-[#183D5C]"
     >
       <FaWhatsapp className="text-xl" />
       <span>+34 617 913 802</span>
@@ -180,7 +180,7 @@ export function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="contact-form border-[5px] border-[#102A43] bg-[#102A43] p-6 text-white/80 md:p-8 lg:p-10"
+            className="contact-form border-[5px] border-[#102A43] bg-[#102A43] p-6 text-cream/80 md:p-8 lg:p-10"
           >
             <div className="grid gap-8 md:grid-cols-2">
               <div>
@@ -250,7 +250,7 @@ export function Contact() {
               <legend className="font-mono text-base uppercase tracking-[0.15em]">
                 ¿Qué tipo de web necesitas? *
               </legend>
-              <p className="mt-2 text-sm text-white/55">
+              <p className="mt-2 text-sm text-cream/55">
                 Elige la opción que mejor encaje con tu idea.
               </p>
 
@@ -263,7 +263,7 @@ export function Contact() {
                 ].map((option) => (
                   <label
                     key={option.value}
-                    className="flex cursor-pointer items-center gap-3 border border-white/15 p-4 transition-colors has-[:checked]:border-cyan has-[:checked]:bg-cyan/10"
+                    className="flex cursor-pointer items-center gap-3 border border-cream/15 p-4 transition-colors has-[:checked]:border-cyan has-[:checked]:bg-cyan/10"
                   >
                     <input
                       type="radio"
@@ -282,7 +282,7 @@ export function Contact() {
               <legend className="font-mono text-base uppercase tracking-[0.15em]">
                 ¿Necesitas algún extra?
               </legend>
-              <p className="mt-2 text-sm text-white/55">
+              <p className="mt-2 text-sm text-cream/55">
                 Puedes seleccionar varias opciones o dejarlo para más adelante.
               </p>
 
@@ -290,7 +290,7 @@ export function Contact() {
                 {extras.map((extra) => (
                   <label
                     key={extra.value}
-                    className="flex cursor-pointer items-start gap-3 border border-white/15 p-4 transition-colors has-[:checked]:border-cyan has-[:checked]:bg-cyan/10"
+                    className="flex cursor-pointer items-start gap-3 border border-cream/15 p-4 transition-colors has-[:checked]:border-cyan has-[:checked]:bg-cyan/10"
                   >
                     <input
                       type="checkbox"
@@ -354,7 +354,7 @@ export function Contact() {
               <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </button>
 
-            <p className="mt-4 text-xs leading-relaxed text-white/45">
+            <p className="mt-4 text-xs leading-relaxed text-cream/45">
               Utilizaremos tus datos únicamente para responder a tu consulta.
             </p>
           </form>

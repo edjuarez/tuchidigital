@@ -179,7 +179,7 @@ export function Packs() {
             <span className="text-yellow">empezar.</span>
           </h2>
 
-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-white/60 md:text-2xl">
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-cream/60 md:text-2xl">
             Soluciones pensadas para diferentes necesidades. Sin complicaciones y con todo lo necesario para poner tu proyecto online.
           </p>
         </div>
@@ -194,7 +194,7 @@ export function Packs() {
                 className={`pack-card relative flex flex-col border p-7 md:p-8 ${
                   isRecommended
                     ? "border-[#55D6FF] bg-[#55D6FF] text-[#102A43]"
-                    : "border-white/15 bg-white/[0.03]"
+                    : "border-cream/15 bg-cream/[0.03]"
                 }`}
               >
                 <div className="relative flex items-start justify-between">
@@ -202,7 +202,7 @@ export function Packs() {
                     className={`font-mono text-5xl ${
                       isRecommended
                         ? "text-[#102A43]/50"
-                        : "text-white/40"
+                        : "text-cream/40"
                     }`}
                   >
                     {pack.number}.
@@ -225,7 +225,7 @@ export function Packs() {
                   className={`mt-5 min-h-20 text-base leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/65"
-                      : "text-white/60"
+                      : "text-cream/60"
                   }`}
                 >
                   {pack.description}
@@ -235,7 +235,7 @@ export function Packs() {
                   className={`my-8 border-y py-6 ${
                     isRecommended
                       ? "border-[#102A43]/20"
-                      : "border-white/10"
+                      : "border-cream/10"
                   }`}
                 >
                   <span className="font-momo text-5xl tracking-[-0.04em] md:text-6xl">
@@ -246,7 +246,7 @@ export function Packs() {
                     className={`mt-2 font-mono text-base uppercase tracking-[0.15em] ${
                       isRecommended
                         ? "text-[#102A43]/50"
-                        : "text-white/40"
+                        : "text-cream/40"
                     }`}
                   >
                     {pack.duration}
@@ -272,7 +272,7 @@ export function Packs() {
                         className={
                           isRecommended
                             ? "text-[#102A43]/75"
-                            : "text-white/75"
+                            : "text-cream/75"
                         }
                       >
                         {item}
@@ -285,7 +285,7 @@ export function Packs() {
                   className={`mt-8 min-h-12 text-base leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/50"
-                      : "text-white/40"
+                      : "text-cream/40"
                   }`}
                 >
                   {pack.note}
@@ -294,7 +294,7 @@ export function Packs() {
                 <p className={`mt-4 text-xs leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/50"
-                      : "text-white/40"
+                      : "text-cream/40"
                   }`}>
                   Precio final. No incluye IVA ni gastos de dominio y hosting.
                 </p>
@@ -314,7 +314,7 @@ export function Packs() {
           })}
         </div>
 
-        <article className="maintenance-card mt-8 border border-[#55D6FF]/40 bg-white/[0.03] p-7 md:p-10">
+        <article className="maintenance-card mt-8 border border-[#55D6FF]/40 bg-cream/[0.03] p-7 md:p-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-4 w-full">
@@ -322,7 +322,7 @@ export function Packs() {
                   Servicio adicional
                 </span>
 
-                <span className="h-px w-12 bg-white/20" />
+                <span className="h-px w-12 bg-cream/20" />
 
                 <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-lime">
                   Mantenimiento mensual
@@ -333,7 +333,7 @@ export function Packs() {
                 Tu sitio sigue creciendo.
               </h3>
 
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-cream/60 md:text-lg">
                 Seguimos trabajando en tu sitio después de publicarlo.
                 Agregamos contenido, nuevas funcionalidades, mejoras y
                 realizamos revisiones técnicas para mantenerlo actualizado.
@@ -343,7 +343,7 @@ export function Packs() {
                 {maintenance.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/75"
+                    className="flex items-start gap-3 text-sm leading-relaxed text-cream/75"
                   >
                     <span className="text-[#55D6FF]">✓</span>
                     <span>{item}</span>
@@ -354,18 +354,18 @@ export function Packs() {
 
             <div className="lg:min-w-64">
               <div className="border border-[#55D6FF]/40 p-6">
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+                <span className="font-mono text-xs uppercase tracking-[0.15em] text-cream/40">
                   Desde
                 </span>
 
                 <div className="mt-2 font-momo text-5xl tracking-[-0.04em]">
                   {maintenance.price}
-                  <span className="font-mono text-sm tracking-normal text-white/40">
+                  <span className="font-mono text-sm tracking-normal text-cream/40">
                     /mes
                   </span>
                 </div>
 
-                <p className="mt-4 text-xs leading-relaxed text-white/40">
+                <p className="mt-4 text-xs leading-relaxed text-cream/40">
                   Servicio opcional. El alcance de cada trabajo se acuerda
                   según las necesidades del proyecto.
                 </p>
@@ -382,7 +382,7 @@ export function Packs() {
           </div>
         </article>
 
-        <article className="marketing-card mt-8 border border-[#55D6FF]/40 bg-white/[0.03] p-7 md:p-10">
+        <article className="marketing-card mt-8 border border-[#55D6FF]/40 bg-cream/[0.03] p-7 md:p-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-4">
@@ -390,7 +390,7 @@ export function Packs() {
                   Servicio adicional
                 </span>
 
-                <span className="h-px w-12 bg-white/20" />
+                <span className="h-px w-12 bg-cream/20" />
 
                 <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-coral">
                   Marketing digital
@@ -405,7 +405,7 @@ export function Packs() {
                 </span>
               </h3>
 
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-cream/60 md:text-lg">
                 Complementamos tu web con acciones de marketing para mejorar
                 tu presencia digital y conectar con tus potenciales clientes.
               </p>
@@ -414,7 +414,7 @@ export function Packs() {
                 {marketing.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/75"
+                    className="flex items-start gap-3 text-sm leading-relaxed text-cream/75"
                   >
                     <span className="text-[#55D6FF]">✓</span>
                     <span>{item}</span>
@@ -422,7 +422,7 @@ export function Packs() {
                 ))}
               </ul>
 
-              <p className="mt-6 text-xs leading-relaxed text-white/40">
+              <p className="mt-6 text-xs leading-relaxed text-cream/40">
                 El volumen de publicaciones y las plataformas se definen
                 según las necesidades del negocio. Publicidad de pago,
                 fotografía y vídeo profesional no incluidos.
@@ -431,18 +431,18 @@ export function Packs() {
 
             <div className="lg:min-w-64">
               <div className="border border-[#55D6FF]/40 p-6">
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+                <span className="font-mono text-xs uppercase tracking-[0.15em] text-cream/40">
                   Desde
                 </span>
 
                 <div className="mt-2 font-momo text-5xl tracking-[-0.04em]">
                   {marketing.price}
-                  <span className="font-mono text-sm tracking-normal text-white/40">
+                  <span className="font-mono text-sm tracking-normal text-cream/40">
                     /mes
                   </span>
                 </div>
 
-                <p className="mt-4 text-xs leading-relaxed text-white/40">
+                <p className="mt-4 text-xs leading-relaxed text-cream/40">
                   Servicio adicional y opcional. Presupuesto personalizado
                   según el alcance.
                 </p>

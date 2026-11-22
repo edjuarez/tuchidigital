@@ -1,14 +1,14 @@
 type SectionDividerProps = {
-  color?: "navy" | "white";
+  color?: "navy" | "cream";
   direction?: "left" | "right";
 };
 
 export function SectionDivider({
-  color = "white",
+  color = "cream",
   direction = "right",
 }: SectionDividerProps) {
   const backgroundColor =
-    color === "navy" ? "bg-navy" : "bg-white";
+    color === "navy" ? "bg-navy" : "bg-cream";
 
   const clipPath =
     direction === "right"

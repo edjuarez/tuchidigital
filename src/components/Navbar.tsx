@@ -23,7 +23,7 @@ export default function Navbar() {
         <a
           href="#inicio"
           onClick={closeMenu}
-          className="font-momo text-xl tracking-[-0.04em] text-white"
+          className="font-momo text-xl tracking-[-0.04em] text-cream"
         >
           tuchi<span className="text-[#55D6FF]">digital</span>
         </a>
@@ -33,7 +33,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[1rem] font-bold text-white transition-colors hover:text-[#55D6FF]"
+              className="text-[1rem] font-bold text-cream transition-colors hover:text-[#55D6FF]"
             >
               {link.label}
             </a>
@@ -50,14 +50,14 @@ export default function Navbar() {
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
-          className="flex h-10 w-10 items-center justify-center text-white transition-colors hover:text-[#55D6FF] md:hidden"
+          className="flex h-10 w-10 items-center justify-center text-cream transition-colors hover:text-[#55D6FF] md:hidden"
         >
           {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
         </button>
 
         <div
           id="mobile-menu"
-          className={`absolute top-full right-0 left-0 border-t border-white/10 bg-navy px-6 transition-all duration-300 md:hidden ${
+          className={`absolute top-full right-0 left-0 border-t border-whicreamte/10 bg-navy px-6 transition-all duration-300 md:hidden ${
             isOpen
               ? "visible translate-y-0 opacity-100"
               : "invisible -translate-y-2 opacity-0"
@@ -71,7 +71,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={closeMenu}
                 tabIndex={isOpen ? 0 : -1}
-                className="border-b border-white/10 py-4 text-base text-white transition-colors hover:text-[#55D6FF]"
+                className="border-b border-cream/10 py-4 text-base text-cream transition-colors hover:text-[#55D6FF]"
               >
                 {link.label}
               </a>

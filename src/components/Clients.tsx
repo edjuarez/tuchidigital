@@ -124,7 +124,7 @@ export function Clients() {
             >
               <div className="relative">
                 <div
-                  className={`relative overflow-hidden bg-white ${
+                  className={`relative overflow-hidden bg-cream ${
                     index % 2 === 1
                       ? "md:ml-16 lg:ml-24"
                       : "md:mr-16 lg:mr-24"
