@@ -216,7 +216,7 @@ export function Technologies() {
     <section
       ref={sectionRef}
       id="technologies"
-      className="relative overflow-hidden bg-white text-navy"
+      className="relative overflow-hidden bg-cream text-navy"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="technologies-content max-w-5xl">

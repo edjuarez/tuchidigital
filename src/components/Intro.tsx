@@ -117,7 +117,7 @@ export function Intro() {
     <section
       ref={sectionRef}
       id="introduction"
-      className="relative overflow-hidden bg-white text-[#102A43]"
+      className="relative overflow-hidden bg-cream text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="intro-content max-w-5xl">

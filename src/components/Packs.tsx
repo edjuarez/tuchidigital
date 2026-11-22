@@ -162,7 +162,7 @@ export function Packs() {
     <section
       ref={sectionRef}
       id="packs"
-      className="relative overflow-hidden section-dark-start bg-[#102A43] text-[#F5F3EE] section-dark-end"
+      className="relative overflow-hidden section-dark-start bg-navy text-[#F5F3EE] section-dark-end"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="packs-header mb-20 max-w-4xl md:mb-28">
@@ -174,7 +174,7 @@ export function Packs() {
 {/*             Tu negocio,
             <br />
             listo para <span className="text-yellow">crecer.</span> */}
-            Elije cómo
+            Elige cómo
             <br />
             <span className="text-yellow">empezar.</span>
           </h2>
