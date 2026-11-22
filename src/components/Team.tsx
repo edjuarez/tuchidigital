@@ -91,7 +91,7 @@ export function Team() {
     <section
       ref={sectionRef}
       id="team"
-      className="relative bg-white text-[#102A43] pb-50"
+      className="relative bg-cream text-[#102A43] pb-50"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="intro-content mb-20 max-w-4xl md:mb-28">

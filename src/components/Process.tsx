@@ -107,7 +107,7 @@ export function Process() {
     <section
       ref={sectionRef}
       id="proceso"
-      className="relative bg-white text-[#102A43]"
+      className="relative bg-cream text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="intro-content mb-20 max-w-3xl md:mb-28">

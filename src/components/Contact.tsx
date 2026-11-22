@@ -121,7 +121,7 @@ export function Contact() {
     <section
       ref={sectionRef}
       id="contacto"
-      className="relative overflow-hidden bg-[#F5F3EE] text-[#102A43]"
+      className="relative overflow-hidden bg-cream text-[#102A43]"
     >
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="grid gap-20 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
