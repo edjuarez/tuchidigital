@@ -1,43 +1,20 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
-  {
-    number: "01",
-    title: "Auditoría inicial",
-    description:
-      "Analizamos tu negocio, objetivos y presencia digital actual para definir qué necesita realmente tu sitio.",
-  },
-  {
-    number: "02",
-    title: "Recopilación de información",
-    description:
-      "Reunimos contenidos, imágenes, referencias y toda la información necesaria para construir una propuesta alineada con tu negocio.",
-  },
-  {
-    number: "03",
-    title: "Desarrollo",
-    description:
-      "Diseñamos y desarrollamos el sitio con una estructura clara, responsive y adaptada a tus necesidades.",
-  },
-  {
-    number: "04",
-    title: "Revisión con el cliente",
-    description:
-      "Te mostramos el resultado, recibimos tus comentarios y realizamos los ajustes necesarios antes de publicarlo.",
-  },
-  {
-    number: "05",
-    title: "Publicación!",
-    description:
-      "Dejamos todo listo para que tu sitio esté online, funcionando correctamente y preparado para recibir a tus visitantes.",
-  },
-];
+  { number: "01", id: "audit" },
+  { number: "02", id: "information" },
+  { number: "03", id: "development" },
+  { number: "04", id: "review" },
+  { number: "05", id: "launch" },
+] as const;
 
 export function Process() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -112,13 +89,17 @@ export function Process() {
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="intro-content mb-20 max-w-3xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
-            Cómo trabajamos
+            {t("process.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Del primer
-            <br />
-            contacto al sitio <span className="text-[#55D6FF]">online.</span>
+            <Trans
+              i18nKey="process.heading"
+              components={{
+                br: <br />,
+                accent: <span className="text-[#55D6FF]" />,
+              }}
+            />
           </h2>
         </div>
 
@@ -140,11 +121,11 @@ export function Process() {
 
               <div className="mt-16">
                 <h3 className="process-title font-momo text-4xl leading-[0.9] tracking-[-0.04em] text-[#F5F3EE] md:text-5xl">
-                  {step.title}
+                  {t(`process.steps.${step.id}.title`)}
                 </h3>
 
                 <p className="process-description mt-6 max-w-xl text-lg leading-relaxed text-[#F5F3EE]/65 md:text-xl">
-                  {step.description}
+                  {t(`process.steps.${step.id}.description`)}
                 </p>
               </div>
 

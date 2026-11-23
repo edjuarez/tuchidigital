@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiPlus } from "react-icons/fi";
@@ -6,54 +7,19 @@ import { FiPlus } from "react-icons/fi";
 gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
-  {
-    question: "¿Qué tipo de sitios web desarrollan?",
-    answer:
-      "Desarrollamos páginas web corporativas, portfolios, landing pages y tiendas online. Cada proyecto se adapta a las necesidades, objetivos y características de cada negocio.",
-  },
-  {
-    question: "¿Cuánto tiempo tarda en estar lista una web?",
-    answer:
-      "El tiempo depende del tipo y alcance del proyecto. Una web sencilla puede estar lista en pocos días, mientras que una tienda online o un proyecto más personalizado requiere más tiempo de desarrollo y revisión.",
-  },
-  {
-    question: "¿Mi web se vera bien en dispositivos móviles?",
-    answer:
-      "Sí, todas nuestras webs están diseñadas para ser completamente responsivas y ofrecer una excelente experiencia en todos los dispositivos, desde ordenadores hasta teléfonos inteligentes.",
-  },
-  {
-    question: "¿Podre tener botones whatsapp y redes sociales en mi web?",
-    answer:
-      "Sí, podemos integrar botones de contacto y enlaces a tus redes sociales directamente en tu web que estan incluidos en todos nuestros packs. Esto facilita la comunicación con tus clientes y mejora la interacción con tu marca.",
-  },
-  {
-    question: "¿El dominio y el hosting están incluidos?",
-    answer:
-      "Si, el dominio y el hosting están incluidos en todos nuestros packs. Se renuevan anualmente y te proporcionamos toda la información necesaria para gestionarlos sin complicaciones.",
-  },
-  {
-    question: "¿Puedo modificar el contenido de mi web después?",
-    answer:
-      "Sí. Dependiendo del proyecto, podemos incorporar un panel de administración para que puedas gestionar contenidos, productos u otra información sin necesidad de modificar el código.",
-  },
-  {
-    question: "Tengo que saber programar para modificar mi web?",
-    answer:
-      "No, no necesitas conocimientos de programación. El panel de administración que implementamos es intuitivo y fácil de usar, permitiéndote actualizar textos, imágenes y otros contenidos de manera sencilla.",
-  },
-  {
-    question: "¿Ofrecen mantenimiento y soporte después de publicar la web?",
-    answer:
-      "Sí. Ofrecemos un servicio de mantenimiento y soporte para realizar cambios, actualizar contenidos, incorporar nuevas funcionalidades, revisar el funcionamiento técnico y seguir evolucionando el sitio.",
-  },
-  {
-    question: "¿Tengo acceso al código fuente de mi web?",
-    answer:
-      "Sí, en cuanto la web este lista te compartiremos un repositorio privado con todo el código fuente y los archivos del proyecto. Esto te permite tener control total sobre tu web y la posibilidad de hacer cambios o migrarla si lo deseas.", 
-  }
-];
+  { id: "q1" },
+  { id: "q2" },
+  { id: "q3" },
+  { id: "q4" },
+  { id: "q5" },
+  { id: "q6" },
+  { id: "q7" },
+  { id: "q8" },
+  { id: "q9" },
+] as const;
 
 export function FAQ() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
   const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -188,26 +154,28 @@ export function FAQ() {
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="faq-content max-w-5xl">
           <span className="section-eyebrow section-eyebrow-light">
-            Preguntas frecuentes
+            {t("faq.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-light mt-6">
-            Todo lo que <span className="text-yellow">necesitas</span>
-            <br />
-            saber antes de empezar.
+            <Trans
+              i18nKey="faq.heading"
+              components={{
+                accent: <span className="text-yellow" />,
+                br: <br />,
+              }}
+            />
           </h2>
 
           <p className="section-description section-description-light mt-8">
-            Algunas de las preguntas más habituales antes de comenzar un
-            proyecto. Si necesitas saber algo más, podemos hablarlo
-            directamente.
+            {t("faq.description")}
           </p>
         </div>
 
         <div className="faq-list mt-20 border-t border-cream/15">
           {faqs.map((faq, index) => (
             <div
-              key={faq.question}
+              key={faq.id}
               className="faq-item border-b border-cream/15"
             >
               <button
@@ -221,7 +189,7 @@ export function FAQ() {
                 </span>
 
                 <span className="flex-1 font-momo text-xl leading-tight tracking-[-0.03em] md:text-3xl">
-                  {faq.question}
+                  {t(`faq.items.${faq.id}.question`)}
                 </span>
 
                 <div
@@ -242,7 +210,7 @@ export function FAQ() {
               >
                 <div className="pb-8 pl-12 pr-14 md:pb-10 md:pl-16 md:pr-20">
                   <p className="max-w-3xl text-base leading-relaxed text-cream/60 md:text-lg">
-                    {faq.answer}
+                    {t(`faq.items.${faq.id}.answer`)}
                   </p>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,26 +7,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    id: "noventitre",
     number: "01",
     name: "Noventitre",
-    description:
-      "E-commerce desarrollado para una marca de bolsos personalizados.",
     image: "/clients/client1.webp",
     logo: "",
     url: "https://noventitre.com",
   },
   {
+    id: "sophie",
     number: "02",
     name: "Sophie Art Tattoo",
-    description:
-      "Sitio web diseñado para presentar el trabajo artístico, servicios y diseños de Sophie Art Tattoo.",
     image: "/clients/client2.webp",
     logo: "",
     url: "https://sophiearttattoo.com",
   },
-];
+] as const;
 
 export function Clients() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -97,19 +97,21 @@ export function Clients() {
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="intro-content mb-20 max-w-4xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
-            Nuestros clientes
+            {t("clients.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Marcas que ya confiaron en{" "}
-            <span className="text-violet">nosotros.</span>
-            <br />
+            <Trans
+              i18nKey="clients.heading"
+              components={{
+                accent: <span className="text-violet" />,
+                br: <br />,
+              }}
+            />
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
-            Una selección de proyectos desarrollados para distintas
-            necesidades y negocios. Diseño, desarrollo y tecnología trabajando
-            juntos para crear productos digitales sólidos.
+            {t("clients.description")}
           </p>
         </div>
 
@@ -164,12 +166,12 @@ export function Clients() {
                   </h3>
 
                   <p className="mt-6 text-lg leading-relaxed text-[#F5F3EE]/60">
-                    {project.description}
+                    {t(`clients.projects.${project.id}.description`)}
                   </p>
 
                   <div className="mt-10 border-t border-[#F5F3EE]/15 pt-6">
                     <span className="flex w-full items-center justify-center border border-[#55D6FF]/40 px-5 py-4 text-base uppercase tracking-[0.15em] text-[#F5F3EE]/70 transition-all duration-300 group-hover:border-[#55D6FF] group-hover:bg-[#55D6FF] group-hover:text-[#102A43]">
-                      Visitar sitio
+                      {t("common.cta.viewSite")}
                     </span>
                   </div>
 

@@ -1,19 +1,22 @@
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FiMenu, FiX } from "react-icons/fi";
 import { ButtonCTA } from "./ui/ButtonCTA";
+import { LanguageSwitcher } from "./ui/LanguageSwitcher";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { label: "Inicio", href: "#inicio" },
-    { label: "Servicios", href: "#introduction" },
-    { label: "Proceso", href: "#proceso" },
-    { label: "Packs", href: "#packs" },
-    { label: "Proyectos", href: "#portfolio" },
-    { label: "Contacto", href: "#contacto" },
-  ];
+    { key: "home", href: "#inicio" },
+    { key: "services", href: "#introduction" },
+    { key: "process", href: "#proceso" },
+    { key: "packs", href: "#packs" },
+    { key: "projects", href: "#portfolio" },
+    { key: "contact", href: "#contacto" },
+  ] as const;
 
   const closeMenu = () => setIsOpen(false);
 
@@ -27,34 +30,40 @@ export default function Navbar() {
         >
           tuchi<span className="text-[#55D6FF]">digital</span>
         </a>
-
-        <div className="hidden gap-8 md:flex">
+        <div className="hidden items-center gap-2 md:flex lg:gap-3">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[1rem] font-bold text-cream transition-colors hover:text-[#55D6FF]"
+              className="
+                inline-flex items-center justify-center
+                px-2 py-3
+                text-[1rem] font-bold text-cream
+                transition-all duration-200
+                hover:bg-cream/10
+                hover:text-[#55D6FF]
+              "
             >
-              {link.label}
+              {t(`nav.${link.key}`)}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <ButtonCTA href="#contacto">Quiero mi web</ButtonCTA>
+        <div className="flex items-center gap-3 md:gap-4">
+          <div className="hidden md:block">
+            <ButtonCTA href="#contacto">{t("common.cta.askWeb")}</ButtonCTA>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
+            aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            className="flex h-10 w-10 items-center justify-center text-cream transition-colors hover:text-[#55D6FF] md:hidden"
+          >
+            {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
+          </button>
         </div>
-
-        <button
-          type="button"
-          onClick={() => setIsOpen((open) => !open)}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-          className="flex h-10 w-10 items-center justify-center text-cream transition-colors hover:text-[#55D6FF] md:hidden"
-        >
-          {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
-        </button>
-
         <div
           id="mobile-menu"
           className={`absolute top-full right-0 left-0 border-t border-whicreamte/10 bg-navy px-6 transition-all duration-300 md:hidden ${
@@ -73,7 +82,7 @@ export default function Navbar() {
                 tabIndex={isOpen ? 0 : -1}
                 className="border-b border-cream/10 py-4 text-base text-cream transition-colors hover:text-[#55D6FF]"
               >
-                {link.label}
+                {t(`nav.${link.key}`)}
               </a>
             ))}
 
@@ -82,12 +91,15 @@ export default function Navbar() {
                 href="#contacto"
                 className="w-full justify-center sm:w-auto"
               >
-                Quiero mi web
+                {t("common.cta.askWeb")}
               </ButtonCTA>
             </div>
           </div>
         </div>
       </nav>
+      <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 md:block mr-6">
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 }
