@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -7,26 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const team = [
   {
+    id: "edu",
     name: "Edu",
-    skill: "Software Engineer",
-    role: "CEO & Founder",
     image: "/team/edu.webp",
   },
   {
+    id: "vicky",
     name: "Vicky",
-    skill: "Digital Marketing Specialist",
-    role: "Marketing Director",
     image: "/team/vicky.webp",
   },
   {
+    id: "angie",
     name: "Angie",
-    skill: "Software Engineer",
-    role: "Creative Director",
     image: "/team/angi.webp",
   },
-];
+] as const;
 
 export function Team() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -96,16 +95,21 @@ export function Team() {
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="intro-content mb-20 max-w-4xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-dark">
-            Nuestro equipo
+            {t("team.eyebrow")}
           </span>
 
           <h2 className="section-header mt-6">
-            El equipo <br/>detrás de <br/>tuchi <span className="text-cyan">digital.</span>
+            <Trans
+              i18nKey="team.heading"
+              components={{
+                br: <br />,
+                accent: <span className="text-cyan" />,
+              }}
+            />
           </h2>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#102A43]/60 md:text-2xl">
-            En tuchi digital tenemos un equipo de profesionales encargados de llevar tu visión a la
-            red de una manera clara, estratégica y profesional.
+            {t("team.description")}
           </p>
         </div>
         <div className="mx-auto max-w-5xl px-4">
@@ -129,11 +133,11 @@ export function Team() {
                   </h3>
 
                   <p className="mt-2 font-mono text-[0.75rem] uppercase tracking-[0.15em] text-[#102A43]/50">
-                    {member.skill}
+                    {t(`team.members.${member.id}.skill`)}
                   </p>
 
                   <p className="mt-2 text-[1rem] uppercase tracking-[0.15em] text-[#102A43]/80">
-                    {member.role}
+                    {t(`team.members.${member.id}.role`)}
                   </p>
                 </div>
               </article>
@@ -145,7 +149,7 @@ export function Team() {
               href="#contacto"
               className="group mt-10 inline-flex items-center gap-4 px-7 py-4 text-base uppercase tracking-[0.15em] bg-navy text-cream transition-all duration-300 hover:bg-cyan hover:text-navy hover:shadow-lg hover:border hover:border-navy disabled:cursor-wait disabled:opacity-60"
             >
-              Contactar al equipo
+              {t("team.cta")}
               <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
         </div>

@@ -1,19 +1,21 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const navigation = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Servicios", href: "#introduction" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Packs", href: "#packs" },
-  { label: "Proyectos", href: "#portfolio" },
-  { label: "Contacto", href: "#contacto" },
-];
+  { key: "home", href: "#inicio" },
+  { key: "services", href: "#introduction" },
+  { key: "process", href: "#proceso" },
+  { key: "packs", href: "#packs" },
+  { key: "projects", href: "#portfolio" },
+  { key: "contact", href: "#contacto" },
+] as const;
 
 export function Footer() {
+  const { t } = useTranslation();
   const footerRef = useRef<HTMLElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
 
@@ -129,7 +131,7 @@ export function Footer() {
 
             <div>
               <span className="font-mono text-[1rem] uppercase tracking-[0.2em] text-[#F5F3EE]/40">
-                Navegación
+                {t("footer.navigation")}
               </span>
 
               <nav className="mt-6 flex flex-col items-start">
@@ -140,7 +142,7 @@ export function Footer() {
                     className="group flex items-center gap-3 py-6 font-momo text-2xl transition-colors duration-300 hover:text-[#55D6FF]"
                   >
                     <span className="h-px w-0 bg-[#55D6FF] transition-all duration-300 group-hover:w-5" />
-                    {item.label}
+                    {t(`nav.${item.key}`)}
                   </a>
                 ))}
               </nav>
@@ -148,17 +150,17 @@ export function Footer() {
 
             <div>
               <span className="font-mono text-[1rem] uppercase tracking-[0.2em] text-[#F5F3EE]/40">
-                Contacto
+                {t("footer.contact")}
               </span>
 
               <div className="mt-6 flex flex-col gap-4">
                 <a
                   href={`https://wa.me/+34617913802?text=${encodeURIComponent(
-                  "¡Hola! Vi la web de Tuchi Digital y me gustaría consultar sobre un proyecto web."
+                  t("footer.whatsappMessage")
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Contactar por WhatsApp"
+                  aria-label={t("footer.whatsappAria")}
                   className="text-lg text-[#F5F3EE]/75 transition-colors duration-300 hover:text-[#55D6FF]"
                 >
                 +34 617 913 802
@@ -172,7 +174,7 @@ export function Footer() {
                 </a>
 
                 <span className="text-lg text-[#F5F3EE]/50">
-                  Barcelona, España
+                  {t("footer.location")}
                 </span>
               </div>
 

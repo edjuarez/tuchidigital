@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -159,6 +160,7 @@ const sizeClasses = {
 };
 
 export function Technologies() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -221,20 +223,21 @@ export function Technologies() {
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="technologies-content max-w-5xl">
           <span className="section-eyebrow section-eyebrow-dark">
-            Tecnología
+            {t("technologies.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Construimos con las <span className="text-coral">herramientas</span>
-            <br />
-            de la web moderna.
+            <Trans
+              i18nKey="technologies.heading"
+              components={{
+                accent: <span className="text-coral" />,
+                br: <br />,
+              }}
+            />
           </h2>
 
           <p className="section-description section-description-dark mt-8">
-            Cada proyecto se desarrolla desde cero utilizando tecnologías
-            profesionales y actuales. Elegimos las herramientas adecuadas para
-            cada necesidad, buscando rendimiento, seguridad, escalabilidad y
-            una experiencia sólida en cualquier dispositivo.
+            {t("technologies.description")}
           </p>
         </div>
 

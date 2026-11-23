@@ -11,10 +11,14 @@ import { Contact } from "./components/Contact";
 import Navbar from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { WhatsAppFloat } from "./components/ui/WhatsAppFloat";
+import { LanguageSync } from "./components/LanguageSync";
+import { Seo } from "./components/Seo";
 
 function App() {
   return (
     <>
+      <LanguageSync />
+      <Seo />
       <WhatsAppFloat />
       <CustomCursor />
       <Navbar />
