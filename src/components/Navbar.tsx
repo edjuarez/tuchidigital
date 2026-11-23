@@ -96,10 +96,8 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </nav>
-      <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 md:block mr-6">
         <LanguageSwitcher />
-      </div>
+      </nav>
     </header>
   );
 }
