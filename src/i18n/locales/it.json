@@ -1,0 +1,338 @@
+{
+  "common": {
+    "cta": {
+      "askWeb": "Voglio il mio sito",
+      "askSite": "Richiedi il mio sito ora",
+      "viewSite": "Visita il sito"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "process": "Processo",
+    "packs": "Pacchetti",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu"
+  },
+  "language": {
+    "label": "Seleziona lingua",
+    "switchTo": "Passa a {{language}}",
+    "names": {
+      "es": "Español",
+      "en": "English",
+      "it": "Italiano"
+    }
+  },
+  "hero": {
+    "description": "Creiamo siti web moderni, <br/>professionali e di grande <accent>impatto.</accent>",
+    "services": {
+      "websites": "SITI WEB",
+      "landings": "LANDING PAGE",
+      "ecommerce": "NEGOZI ONLINE",
+      "marketing": "MARKETING DIGITALE",
+      "seo": "SEO",
+      "maintenance": "MANUTENZIONE"
+    },
+    "benefits": {
+      "custom": "Siti web su misura",
+      "seo": "SEO",
+      "noMaintenance": "Nessun costo di manutenzione",
+      "responsive": "Adattivi",
+      "social": "Link ai social",
+      "guarantee": "Garanzia di soddisfazione"
+    }
+  },
+  "intro": {
+    "eyebrow": "Cosa facciamo",
+    "heading": "Creiamo la tua presenza<br/>digitale in modo <accent>professionale.</accent>",
+    "description": "Creiamo siti web moderni utilizzando le tecnologie più recenti, sviluppati su misura per soddisfare le esigenze di ogni cliente e far crescere il suo business. Perché avere un sito è solo l'inizio: ti aiutiamo anche a lavorare sulla visibilità e sulla presenza digitale per raggiungere le persone che contano davvero.",
+    "features": {
+      "websites": {
+        "title": "Siti web",
+        "description": "Siti aziendali, portfolio e pagine per presentare il tuo business."
+      },
+      "ecommerce": {
+        "title": "Negozi online",
+        "description": "E-commerce pronti a mostrare i prodotti e ricevere vendite."
+      },
+      "marketing": {
+        "title": "Marketing digitale",
+        "description": "Strategie per migliorare la tua visibilità e connetterti con nuovi clienti."
+      },
+      "support": {
+        "title": "Supporto ed evoluzione",
+        "description": "Accompagnamento, miglioramenti e supporto per far funzionare e crescere il tuo sito."
+      }
+    },
+    "cta": "Parliamo del tuo progetto"
+  },
+  "process": {
+    "eyebrow": "Come lavoriamo",
+    "heading": "Dal primo<br/>contatto al sito <accent>online.</accent>",
+    "steps": {
+      "audit": {
+        "title": "Audit iniziale",
+        "description": "Analizziamo il tuo business, gli obiettivi e la presenza digitale attuale per definire di cosa ha davvero bisogno il tuo sito."
+      },
+      "information": {
+        "title": "Raccolta delle informazioni",
+        "description": "Raccogliamo contenuti, immagini, referenze e tutte le informazioni necessarie per costruire una proposta allineata al tuo business."
+      },
+      "development": {
+        "title": "Sviluppo",
+        "description": "Progettiamo e sviluppiamo il sito con una struttura chiara, responsive e adattata alle tue esigenze."
+      },
+      "review": {
+        "title": "Revisione con il cliente",
+        "description": "Ti mostriamo il risultato, raccogliamo i tuoi commenti e apportiamo le modifiche necessarie prima della pubblicazione."
+      },
+      "launch": {
+        "title": "Pubblicazione!",
+        "description": "Prepariamo tutto perché il tuo sito sia online, funzioni correttamente e sia pronto ad accogliere i visitatori."
+      }
+    }
+  },
+  "technologies": {
+    "eyebrow": "Tecnologia",
+    "heading": "Costruiamo con gli <accent>strumenti</accent><br/>del web moderno.",
+    "description": "Ogni progetto viene sviluppato da zero utilizzando tecnologie professionali e attuali. Scegliamo gli strumenti giusti per ogni esigenza, puntando su prestazioni, sicurezza, scalabilità e un'esperienza solida su qualsiasi dispositivo."
+  },
+  "packs": {
+    "eyebrow": "I nostri servizi",
+    "heading": "Scegli come<br/><accent>iniziare.</accent>",
+    "description": "Soluzioni pensate per esigenze diverse. Senza complicazioni e con tutto il necessario per mettere online il tuo progetto.",
+    "recommended": "Consigliato",
+    "vatNote": "Prezzo finale. IVA e costi di dominio e hosting esclusi.",
+    "additionalService": "Servizio aggiuntivo",
+    "features": {
+      "customDesign": "Design personalizzato",
+      "sections4": "Fino a 4 sezioni",
+      "sections10": "Fino a 10 sezioni",
+      "responsive": "Design responsive",
+      "images": "Immagini integrate nei contenuti",
+      "social": "Pulsanti social",
+      "contactFormSimple": "Modulo di contatto semplice",
+      "contactFormFull": "Modulo di contatto completo",
+      "gallery": "Galleria immagini gestibile",
+      "adminPanel": "Pannello di amministrazione",
+      "seo": "SEO iniziale",
+      "analytics": "Integrazione con Google Analytics",
+      "hosting": "Hosting e dominio gratuiti per 1 anno",
+      "landingIncluded": "Tutto ciò che è incluso nel pacchetto Landing Pro",
+      "catalog": "Catalogo prodotti",
+      "cart": "Carrello",
+      "checkout": "Processo di acquisto",
+      "payments": "Integrazione pagamenti",
+      "orders": "Gestione prodotti e ordini"
+    },
+    "items": {
+      "basic": {
+        "description": "Un sito semplice e professionale per presentare il tuo business, i tuoi servizi e i tuoi contatti.",
+        "duration": "Pronto in 5–7 giorni",
+        "note": "Ideale per professionisti, lavoratori autonomi e piccoli business.",
+        "button": "Richiedi pacchetto"
+      },
+      "landing": {
+        "description": "Un sito completo per presentare il tuo business, mostrare i tuoi lavori e gestire i contenuti.",
+        "duration": "Pronto in 10–15 giorni",
+        "note": "Per business che hanno bisogno di una presenza digitale più completa.",
+        "button": "Richiedi pacchetto"
+      },
+      "ecommerce": {
+        "description": "Un negozio online per mostrare, gestire e vendere i tuoi prodotti.",
+        "duration": "Pronto in 15–20 giorni",
+        "note": "Per business che vogliono iniziare a vendere online.",
+        "button": "Richiedi pacchetto"
+      }
+    },
+    "maintenance": {
+      "name": "Manutenzione mensile",
+      "title": "Il tuo sito continua a crescere.",
+      "description": "Continuiamo a lavorare sul tuo sito dopo la pubblicazione. Aggiungiamo contenuti, nuove funzionalità e miglioramenti, ed effettuiamo revisioni tecniche per mantenerlo aggiornato.",
+      "features": {
+        "newFeatures": "Nuove funzionalità",
+        "content": "Caricamento e aggiornamento dei contenuti",
+        "changes": "Modifiche e adattamenti al sito",
+        "design": "Miglioramenti grafici",
+        "technical": "Revisione tecnica",
+        "updates": "Aggiornamenti",
+        "recommendations": "Consigli di miglioramento",
+        "support": "Supporto e monitoraggio"
+      },
+      "from": "Da",
+      "perMonth": "/mese",
+      "note": "Servizio opzionale. L'ambito di ogni intervento viene concordato in base alle esigenze del progetto.",
+      "button": "Richiedi manutenzione"
+    },
+    "marketing": {
+      "name": "Marketing digitale",
+      "title": "Più visibilità.<br/><accent>Più opportunità.</accent>",
+      "description": "Integriamo il tuo sito con azioni di marketing per migliorare la tua presenza digitale e connetterti con i potenziali clienti.",
+      "features": {
+        "planning": "Pianificazione mensile dei contenuti",
+        "posts": "Design dei post",
+        "copy": "Scrittura dei testi",
+        "profiles": "Ottimizzazione dei profili social",
+        "calendar": "Calendario editoriale",
+        "results": "Revisione dei risultati"
+      },
+      "note": "Servizio aggiuntivo e opzionale. Preventivo personalizzato in base all'ambito.",
+      "footnote": "Il volume dei post e le piattaforme vengono definiti in base alle esigenze del business. Pubblicità a pagamento, fotografia e video professionali non inclusi.",
+      "from": "Da",
+      "perMonth": "/mese",
+      "button": "Richiedi il servizio"
+    }
+  },
+  "clients": {
+    "eyebrow": "I nostri clienti",
+    "heading": "Brand che si sono già affidati a <accent>noi.</accent><br/>",
+    "description": "Una selezione di progetti sviluppati per esigenze e business diversi. Design, sviluppo e tecnologia che lavorano insieme per creare prodotti digitali solidi.",
+    "projects": {
+      "noventitre": {
+        "description": "E-commerce sviluppato per un marchio di borse personalizzate."
+      },
+      "sophie": {
+        "description": "Sito web progettato per presentare il lavoro artistico, i servizi e i design di Sophie Art Tattoo."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "Il nostro team",
+    "heading": "Il team <br/>dietro <br/>tuchi <accent>digital.</accent>",
+    "description": "In tuchi digital abbiamo un team di professionisti incaricati di portare la tua visione sul web in modo chiaro, strategico e professionale.",
+    "members": {
+      "edu": {
+        "skill": "Ingegnere del software",
+        "role": "CEO e fondatore"
+      },
+      "vicky": {
+        "skill": "Specialista in marketing digitale",
+        "role": "Direttrice marketing"
+      },
+      "angie": {
+        "skill": "Ingegnere del software",
+        "role": "Direttrice creativa"
+      }
+    },
+    "cta": "Contatta il team"
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "heading": "Tutto ciò che <accent>devi</accent><br/>sapere prima di iniziare.",
+    "description": "Alcune delle domande più comuni prima di iniziare un progetto. Se hai bisogno di sapere qualcos'altro, possiamo parlarne direttamente.",
+    "items": {
+      "q1": {
+        "question": "Che tipo di siti web sviluppate?",
+        "answer": "Sviluppiamo siti web aziendali, portfolio, landing page e negozi online. Ogni progetto si adatta alle esigenze, agli obiettivi e alle caratteristiche di ogni business."
+      },
+      "q2": {
+        "question": "Quanto tempo serve perché un sito sia pronto?",
+        "answer": "Il tempo dipende dal tipo e dall'ambito del progetto. Un sito semplice può essere pronto in pochi giorni, mentre un negozio online o un progetto più personalizzato richiede più tempo di sviluppo e revisione."
+      },
+      "q3": {
+        "question": "Il mio sito sarà adatto ai dispositivi mobili?",
+        "answer": "Sì, tutti i nostri siti sono progettati per essere completamente responsive e offrire un'ottima esperienza su tutti i dispositivi, dai computer agli smartphone."
+      },
+      "q4": {
+        "question": "Posso avere pulsanti WhatsApp e link ai social sul mio sito?",
+        "answer": "Sì, possiamo integrare pulsanti di contatto e link ai tuoi social direttamente nel sito, e sono inclusi in tutti i nostri pacchetti. Questo facilita la comunicazione con i clienti e migliora l'interazione con il tuo brand."
+      },
+      "q5": {
+        "question": "Il dominio e l'hosting sono inclusi?",
+        "answer": "Sì, il dominio e l'hosting sono inclusi in tutti i nostri pacchetti. Si rinnovano annualmente e ti forniamo tutte le informazioni necessarie per gestirli senza complicazioni."
+      },
+      "q6": {
+        "question": "Posso modificare i contenuti del mio sito in seguito?",
+        "answer": "Sì. A seconda del progetto, possiamo integrare un pannello di amministrazione per gestire contenuti, prodotti o altre informazioni senza modificare il codice."
+      },
+      "q7": {
+        "question": "Devo saper programmare per modificare il mio sito?",
+        "answer": "No, non servono conoscenze di programmazione. Il pannello di amministrazione che implementiamo è intuitivo e facile da usare, e ti permette di aggiornare testi, immagini e altri contenuti in modo semplice."
+      },
+      "q8": {
+        "question": "Offrite manutenzione e supporto dopo la pubblicazione del sito?",
+        "answer": "Sì. Offriamo un servizio di manutenzione e supporto per apportare modifiche, aggiornare contenuti, aggiungere nuove funzionalità, verificare il funzionamento tecnico e continuare a far evolvere il sito."
+      },
+      "q9": {
+        "question": "Ho accesso al codice sorgente del mio sito?",
+        "answer": "Sì, non appena il sito è pronto condivideremo un repository privato con tutto il codice sorgente e i file del progetto. Questo ti dà il pieno controllo sul tuo sito e la possibilità di apportare modifiche o migrarlo se lo desideri."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "heading": "Parliamo del tuo<br/><accent>progetto.</accent>",
+    "description": "Raccontaci cosa hai in mente, di cosa hai bisogno e quali obiettivi vuoi raggiungere. Analizzeremo il tuo progetto e ti contatteremo per parlare dei prossimi passi.",
+    "ideaTitle": "Hai un'idea?",
+    "ideaText": "Siamo pronti a portarla sul web.",
+    "whatsappAria": "Contatta tramite WhatsApp",
+    "emailAria": "Invia un'email",
+    "whatsappMessage": "Ciao! Ho visto il sito di Tuchi Digital e vorrei informazioni su un progetto web.",
+    "form": {
+      "labels": {
+        "name": "Nome *",
+        "email": "Email *",
+        "phone": "Telefono",
+        "company": "Azienda",
+        "message": "Raccontaci il tuo progetto *",
+        "honeypot": "Non compilare questo campo"
+      },
+      "placeholders": {
+        "name": "Il tuo nome",
+        "email": "tu@email.com",
+        "phone": "+34 600 000 000",
+        "company": "Nome della tua azienda",
+        "message": "Di cosa hai bisogno? Cosa hai in mente?"
+      },
+      "project": {
+        "legend": "Che tipo di sito ti serve? *",
+        "help": "Scegli l'opzione più adatta alla tua idea.",
+        "options": {
+          "web": "Sito base",
+          "landing": "Landing page",
+          "ecommerce": "Negozio online",
+          "unsure": "Non lo so ancora"
+        }
+      },
+      "extras": {
+        "legend": "Ti servono degli extra?",
+        "help": "Puoi selezionare più opzioni o lasciarlo per dopo.",
+        "options": {
+          "seo": "SEO e posizionamento",
+          "analytics": "Google Analytics",
+          "maintenance": "Manutenzione sito",
+          "marketing": "Marketing digitale"
+        }
+      },
+      "validation": {
+        "required": "Compila questo campo.",
+        "email": "Inserisci un'email valida."
+      },
+      "submitting": "Invio in corso...",
+      "submit": "Invia richiesta",
+      "privacy": "Utilizzeremo i tuoi dati solo per rispondere alla tua richiesta.",
+      "success": "Grazie! Abbiamo ricevuto la tua richiesta e ti contatteremo.",
+      "error": "Impossibile inviare il messaggio. Riprova."
+    }
+  },
+  "footer": {
+    "navigation": "Navigazione",
+    "contact": "Contatti",
+    "location": "Barcellona, Spagna",
+    "whatsappAria": "Contatta tramite WhatsApp",
+    "whatsappMessage": "Ciao! Ho visto il sito di Tuchi Digital e vorrei informazioni su un progetto web."
+  },
+  "whatsapp": {
+    "label": "Parliamo!",
+    "aria": "Contatta Tuchi Digital su WhatsApp",
+    "message": "Ciao, vorrei ricevere informazioni sui vostri servizi web."
+  },
+  "seo": {
+    "title": "Tuchi Digital | Web design e sviluppo",
+    "description": "Tuchi Digital crea siti web, landing page e negozi online su misura. Design, sviluppo, SEO e soluzioni digitali per il tuo business.",
+    "keywords": "web design, sviluppo web, siti web, landing page, negozi online, ecommerce, SEO, sviluppo web Barcellona, agenzia digitale",
+    "ogImageAlt": "Tuchi Digital — Web design e sviluppo"
+  }
+}

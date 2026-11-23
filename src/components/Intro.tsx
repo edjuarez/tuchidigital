@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -12,32 +13,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
-    title: "Páginas web",
-    description:
-      "Sitios corporativos, portfolios y páginas para presentar tu negocio.",
+    id: "websites",
     icon: FiGlobe,
   },
   {
-    title: "Tiendas online",
-    description:
-      "E-commerce preparados para mostrar productos y recibir ventas.",
+    id: "ecommerce",
     icon: FiShoppingBag,
   },
   {
-    title: "Marketing digital",
-    description:
-      "Estrategias para mejorar tu visibilidad y conectar con nuevos clientes.",
+    id: "marketing",
     icon: FiLayers,
   },
   {
-    title: "Soporte & evolución",
-    description:
-      "Acompañamiento, mejoras y soporte para que tu web siga funcionando y creciendo.",
+    id: "support",
     icon: FiHeadphones,
   },
-];
+] as const;
 
 export function Intro() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -122,22 +116,21 @@ export function Intro() {
       <div className="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-36 lg:px-16">
         <div className="intro-content max-w-5xl">
           <span className="section-eyebrow section-eyebrow-dark">
-            Lo que hacemos
+            {t("intro.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-dark mt-6">
-            Creamos tu presencia
-            <br />
-            digital de manera{" "}
-            <span className="text-cyan">profesional.</span>
+            <Trans
+              i18nKey="intro.heading"
+              components={{
+                br: <br />,
+                accent: <span className="text-cyan" />,
+              }}
+            />
           </h2>
 
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#102A43]/65 md:text-xl">
-            Creamos sitios web modernos utilizando las últimas tecnologías,
-            desarrollados a medida para cubrir las necesidades de cada cliente
-            e impulsar su negocio. Porque tener una web es solo el comienzo:
-            también te ayudamos a trabajar su visibilidad y presencia digital
-            para que llegue a las personas que realmente importan.
+            {t("intro.description")}
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -145,25 +138,25 @@ export function Intro() {
             const Icon = feature.icon;
 
             return (
-              <div key={feature.title} className="intro-feature relative flex h-full">
+              <div key={feature.id} className="intro-feature relative flex h-full">
                 <div className="absolute -bottom-1 -right-1 h-full w-full bg-cyan" />
 
                 <article
-                  className="group relative z-10 flex h-full w-full flex-col border-1 border-cyan hover:bg-white p-7 transition-colors duration-300 bg-[#102A43] hover:text-navy text-[#F5F3EE] md:p-8"
+                  className="group relative z-10 flex h-full w-full flex-col border-1 border-cyan hover:bg-cream p-7 transition-colors duration-300 bg-[#102A43] hover:text-navy text-[#F5F3EE] md:p-8"
                 >
                   <div className="flex items-start justify-between">
                     <Icon
-                      className="text-4xl hover:text-white transition-transform duration-300 group-hover:scale-110"
+                      className="text-4xl hover:text-cream transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={2}
                     />
                   </div>
 
                   <h3 className="mt-16 font-momo text-2xl leading-none tracking-[-0.03em]">
-                    {feature.title}
+                    {t(`intro.features.${feature.id}.title`)}
                   </h3>
 
                   <p className="mt-4 text-base transition-colors duration-300">
-                    {feature.description}
+                    {t(`intro.features.${feature.id}.description`)}
                   </p>
 
                   <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#55D6FF] transition-all duration-500 group-hover:w-full" />
@@ -176,9 +169,9 @@ export function Intro() {
         <div className="intro-cta mt-12">
           <a
             href="#contacto"
-            className="group inline-flex items-center gap-6 border border-[#55D6FF] hover:border-navy bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
+            className="group inline-flex items-center gap-6 border border-[#55D6FF] hover:border-navy bg-navy px-8 py-5 text-base font-medium uppercase tracking-[0.12em] text-cream transition-all duration-300 hover:bg-[#55D6FF] hover:text-navy"
           >
-            <span>Consulta tu proyecto</span>
+            <span>{t("intro.cta")}</span>
           </a>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCheckCircle } from "react-icons/fa";
@@ -9,9 +10,17 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = ["SITIOS WEB", "LANDINGS", "TIENDAS ONLINE", "MARKETING DIGITAL", "SEO", "MANTENIMIENTO"];
+const services = [
+  "websites",
+  "landings",
+  "ecommerce",
+  "marketing",
+  "seo",
+  "maintenance",
+] as const;
 
 export function Hero() {
+  const { t } = useTranslation();
   const heroRef = useRef<HTMLElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
@@ -185,9 +194,9 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-[-10%]"
       >
-        <div className="absolute left-[55%] top-[15%] h-[45vw] w-[45vw] rounded-full border border-white/[0.09]" />
-        <div className="absolute left-[60%] top-[20%] h-[32vw] w-[32vw] rounded-full border border-white/[0.07]" />
-        <div className="absolute left-[66%] top-[26%] h-[20vw] w-[20vw] rounded-full border border-white/[0.06]" />
+        <div className="absolute left-[55%] top-[15%] h-[45vw] w-[45vw] rounded-full border border-cream/[0.09]" />
+        <div className="absolute left-[60%] top-[20%] h-[32vw] w-[32vw] rounded-full border border-cream/[0.07]" />
+        <div className="absolute left-[66%] top-[26%] h-[20vw] w-[20vw] rounded-full border border-cream/[0.06]" />
         <div className="absolute left-[70%] top-[30%] h-[10vw] w-[10vw] rounded-full bg-[#55D6FF]/10 blur-3xl" />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgba(255,255,255,0.09),transparent_32%)]" />
@@ -221,28 +230,31 @@ export function Hero() {
               <br />
 
               <p className="text-[2.2rem] font-medium leading-[0.92] tracking-[-0.045em] md:text-[2.8rem] xl:text-[3rem]">
-                Creamos sitios web modernos,{" "}
-                <br className="hidden md:block" />
-                profesionales y de alto{" "}
-                <span className="text-[3.2rem] font-bold text-violet md:text-[4rem]">
-                  impacto.
-                </span>
+                <Trans
+                  i18nKey="hero.description"
+                  components={{
+                    br: <br className="hidden md:block" />,
+                    accent: (
+                      <span className="text-[3.2rem] font-bold text-violet md:text-[4rem]" />
+                    ),
+                  }}
+                />
               </p>
             </div>
 
-            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 border-y border-white/15 py-5 md:gap-x-10">
+            <div className="hero-services mt-10 flex max-w-3xl flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 border-y border-cream/15 py-5 md:gap-x-10">
               {services.map((service) => (
                 <span
                   key={service}
-                  className="font-mono text-sm font-bold uppercase tracking-[0.2em] text-white/80 md:text-base"
+                  className="font-mono text-sm font-bold uppercase tracking-[0.2em] text-cream/80 md:text-base"
                 >
-                  {service}
+                  {t(`hero.services.${service}`)}
                 </span>
               ))}
             </div>
             <div className="hero-actions mt-10">
               <ActionButton href="#contacto" variant="light">
-                Pedir mi sitio ahora
+                {t("common.cta.askSite")}
                 <FaLocationArrow size={20} className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </ActionButton>
             </div>
@@ -266,7 +278,7 @@ export function Hero() {
                 className="hero-benefit absolute left-[-4%] top-[15%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>Sitios web a medida</span>
+                <span>{t("hero.benefits.custom")}</span>
               </li>
 
               <li
@@ -274,7 +286,7 @@ export function Hero() {
                 className="hero-benefit absolute right-[-5%] top-[10%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>SEO</span>
+                <span>{t("hero.benefits.seo")}</span>
               </li>
 
               <li
@@ -282,7 +294,7 @@ export function Hero() {
                 className="hero-benefit absolute bottom-[15%] left-[-6%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>Sin costo de mantenimiento</span>
+                <span>{t("hero.benefits.noMaintenance")}</span>
               </li>
 
               <li
@@ -290,7 +302,7 @@ export function Hero() {
                 className="hero-benefit absolute right-[-7%] top-[38%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>Adaptados</span>
+                <span>{t("hero.benefits.responsive")}</span>
               </li>
 
               <li
@@ -298,7 +310,7 @@ export function Hero() {
                 className="hero-benefit absolute bottom-[24%] right-[-5%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>Enlaces a redes sociales</span>
+                <span>{t("hero.benefits.social")}</span>
               </li>
 
               <li
@@ -306,7 +318,7 @@ export function Hero() {
                 className="hero-benefit absolute bottom-[0%] right-[22%] flex items-center gap-2 rounded-xl border border-[#55D6FF]/40 bg-[#102A43]/90 px-4 py-3 text-sm text-[#F5F3EE] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm"
               >
                 <FaCheckCircle className="h-5 w-5 shrink-0 text-[#55D6FF]" />
-                <span>Garantía de satisfacción</span>
+                <span>{t("hero.benefits.guarantee")}</span>
               </li>
             </ul>
           </div>

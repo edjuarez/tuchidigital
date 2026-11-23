@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCheckCircle } from "react-icons/fa";
@@ -8,99 +9,87 @@ gsap.registerPlugin(ScrollTrigger);
 
 const packs = [
   {
+    id: "basic",
     number: "01",
     name: "Web Básica",
-    description:
-      "Una web sencilla y profesional para presentar tu negocio, tus servicios y tus datos de contacto.",
     price: "350 €",
-    duration: "Lista en 5–7 días",
-    items: [
-      "Diseño personalizado",
-      "Hasta 4 secciones",
-      "Diseño responsive",
-      "Imágenes integradas en el contenido",
-      "Botones a redes sociales",
-      "Formulario de contacto sencillo",
-      "SEO inicial",
-      "Hosting y dominio gratis por 1 año",
+    features: [
+      "customDesign",
+      "sections4",
+      "responsive",
+      "images",
+      "social",
+      "contactFormSimple",
+      "seo",
+      "hosting",
     ],
-    note: "Ideal para profesionales, autónomos y pequeños negocios.",
-    button: "Pedir pack",
   },
   {
+    id: "landing",
     number: "02",
     name: "Landing Pro",
-    description:
-      "Una web completa para presentar tu negocio, mostrar tus trabajos y gestionar el contenido.",
     price: "650 €",
-    duration: "Lista en 10–15 días",
-    items: [
-      "Diseño personalizado",
-      "Hasta 10 secciones",
-      "Diseño responsive",
-      "Galería de imágenes gestionable",
-      "Panel de administración",
-      "Botones a redes sociales",
-      "Formulario de contacto completo",
-      "SEO inicial",
-      "Integración con Google Analytics",
-      "Hosting y dominio gratis por 1 año",
+    features: [
+      "customDesign",
+      "sections10",
+      "responsive",
+      "gallery",
+      "adminPanel",
+      "social",
+      "contactFormFull",
+      "seo",
+      "analytics",
+      "hosting",
     ],
-    note:
-      "Para negocios que necesitan una presencia digital más completa.",
-    button: "Pedir pack",
   },
   {
+    id: "ecommerce",
     number: "03",
     name: "E-commerce",
-    description:
-      "Una tienda online para mostrar, gestionar y vender tus productos.",
     price: "850 €",
-    duration: "Lista en 15–20 días",
-    items: [
-      "Todo lo incluido en el pack Landing Pro",
-      "Diseño personalizado",
-      "Catálogo de productos",
-      "Carrito de compras",
-      "Proceso de compra",
-      "Integración de pagos",
-      "Gestión de productos y pedidos",
-      "Panel de administración",
-      "Diseño responsive",
-      "Hosting y dominio gratis por 1 año",
+    features: [
+      "landingIncluded",
+      "customDesign",
+      "catalog",
+      "cart",
+      "checkout",
+      "payments",
+      "orders",
+      "adminPanel",
+      "responsive",
+      "hosting",
     ],
-    note: "Para negocios que quieren empezar a vender online.",
-    button: "Pedir pack",
   },
-];
+] as const;
 
 const maintenance = {
   price: "30 €",
-  items: [
-    "Nuevas funcionalidades",
-    "Carga y actualización de contenido",
-    "Cambios y ajustes en el sitio",
-    "Mejoras de diseño",
-    "Revisión técnica",
-    "Actualizaciones",
-    "Recomendaciones de mejora",
-    "Soporte y seguimiento",
+  features: [
+    "newFeatures",
+    "content",
+    "changes",
+    "design",
+    "technical",
+    "updates",
+    "recommendations",
+    "support",
   ],
-};
+} as const;
 
 const marketing = {
   price: "250 €",
-  items: [
-    "Planificación mensual de contenido",
-    "Diseño de publicaciones",
-    "Redacción de textos",
-    "Optimización de perfiles sociales",
-    "Calendario editorial",
-    "Revisión de resultados",
+  features: [
+    "planning",
+    "posts",
+    "copy",
+    "profiles",
+    "calendar",
+    "results",
   ],
-};
+} as const;
 
 export function Packs() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -167,20 +156,21 @@ export function Packs() {
       <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40 lg:px-16">
         <div className="packs-header mb-20 max-w-4xl md:mb-28">
           <span className="section-eyebrow section-eyebrow-light">
-            Nuestros servicios
+            {t("packs.eyebrow")}
           </span>
 
           <h2 className="section-header section-header-light mt-6">
-{/*             Tu negocio,
-            <br />
-            listo para <span className="text-yellow">crecer.</span> */}
-            Elige cómo
-            <br />
-            <span className="text-yellow">empezar.</span>
+            <Trans
+              i18nKey="packs.heading"
+              components={{
+                br: <br />,
+                accent: <span className="text-yellow" />,
+              }}
+            />
           </h2>
 
-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-white/60 md:text-2xl">
-            Soluciones pensadas para diferentes necesidades. Sin complicaciones y con todo lo necesario para poner tu proyecto online.
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-cream/60 md:text-2xl">
+            {t("packs.description")}
           </p>
         </div>
 
@@ -190,11 +180,11 @@ export function Packs() {
 
             return (
               <article
-                key={pack.name}
+                key={pack.number}
                 className={`pack-card relative flex flex-col border p-7 md:p-8 ${
                   isRecommended
                     ? "border-[#55D6FF] bg-[#55D6FF] text-[#102A43]"
-                    : "border-white/15 bg-white/[0.03]"
+                    : "border-cream/15 bg-cream/[0.03]"
                 }`}
               >
                 <div className="relative flex items-start justify-between">
@@ -202,7 +192,7 @@ export function Packs() {
                     className={`font-mono text-5xl ${
                       isRecommended
                         ? "text-[#102A43]/50"
-                        : "text-white/40"
+                        : "text-cream/40"
                     }`}
                   >
                     {pack.number}.
@@ -212,7 +202,7 @@ export function Packs() {
                     <span
                       className="absolute -right-11 -top-11 z-10 border border-[#A57932] bg-[linear-gradient(160deg,#B88938_0%,#EBD59B_22%,#FFF1BD_38%,#D6B77A_55%,#B88938_78%,#E8CB83_100%)] px-5 py-2.5 font-mono text-sm font-bold uppercase tracking-[0.16em] text-[#102A43] shadow-[0_4px_8px_rgba(0,0,0,0.2),0_3px_8px_rgba(165,121,50,0.25),inset_0_-2px_4px_rgba(139,93,30,0.55),inset_0_1px_2px_rgba(255,245,205,0.95)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.22),0_5px_12px_rgba(165,121,50,0.35),inset_0_-2px_4px_rgba(139,93,30,0.4),inset_0_1px_2px_rgba(255,245,205,0.95)]"
                     >
-                      Recomendado
+                      {t("packs.recommended")}
                     </span>
                   )}
                 </div>
@@ -225,17 +215,17 @@ export function Packs() {
                   className={`mt-5 min-h-20 text-base leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/65"
-                      : "text-white/60"
+                      : "text-cream/60"
                   }`}
                 >
-                  {pack.description}
+                  {t(`packs.items.${pack.id}.description`)}
                 </p>
 
                 <div
                   className={`my-8 border-y py-6 ${
                     isRecommended
                       ? "border-[#102A43]/20"
-                      : "border-white/10"
+                      : "border-cream/10"
                   }`}
                 >
                   <span className="font-momo text-5xl tracking-[-0.04em] md:text-6xl">
@@ -246,17 +236,17 @@ export function Packs() {
                     className={`mt-2 font-mono text-base uppercase tracking-[0.15em] ${
                       isRecommended
                         ? "text-[#102A43]/50"
-                        : "text-white/40"
+                        : "text-cream/40"
                     }`}
                   >
-                    {pack.duration}
+                    {t(`packs.items.${pack.id}.duration`)}
                   </p>
                 </div>
 
                 <ul className="flex flex-1 flex-col gap-4">
-                  {pack.items.map((item) => (
+                  {pack.features.map((feature) => (
                     <li
-                      key={item}
+                      key={feature}
                       className="flex items-start gap-3 text-base leading-relaxed"
                     >
                       <FaCheckCircle
@@ -272,10 +262,10 @@ export function Packs() {
                         className={
                           isRecommended
                             ? "text-[#102A43]/75"
-                            : "text-white/75"
+                            : "text-cream/75"
                         }
                       >
-                        {item}
+                        {t(`packs.features.${feature}`)}
                       </span>
                     </li>
                   ))}
@@ -285,18 +275,18 @@ export function Packs() {
                   className={`mt-8 min-h-12 text-base leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/50"
-                      : "text-white/40"
+                      : "text-cream/40"
                   }`}
                 >
-                  {pack.note}
+                  {t(`packs.items.${pack.id}.note`)}
                 </p>
 
                 <p className={`mt-4 text-xs leading-relaxed ${
                     isRecommended
                       ? "text-[#102A43]/50"
-                      : "text-white/40"
+                      : "text-cream/40"
                   }`}>
-                  Precio final. No incluye IVA ni gastos de dominio y hosting.
+                  {t("packs.vatNote")}
                 </p>
 
                 <a
@@ -307,46 +297,44 @@ export function Packs() {
                       : "border-[#55D6FF] text-[#55D6FF] hover:bg-[#55D6FF] hover:text-[#102A43]"
                   }`}
                 >
-                  {pack.button}
+                  {t(`packs.items.${pack.id}.button`)}
                 </a>
               </article>
             );
           })}
         </div>
 
-        <article className="maintenance-card mt-8 border border-[#55D6FF]/40 bg-white/[0.03] p-7 md:p-10">
+        <article className="maintenance-card mt-8 border border-[#55D6FF]/40 bg-cream/[0.03] p-7 md:p-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-4 w-full">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#55D6FF]">
-                  Servicio adicional
+                  {t("packs.additionalService")}
                 </span>
 
-                <span className="h-px w-12 bg-white/20" />
+                <span className="h-px w-12 bg-cream/20" />
 
                 <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-lime">
-                  Mantenimiento mensual
+                  {t("packs.maintenance.name")}
                 </span>
               </div>
 
               <h3 className="mt-6 font-momo text-4xl tracking-[-0.04em] md:text-5xl">
-                Tu sitio sigue creciendo.
+                {t("packs.maintenance.title")}
               </h3>
 
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
-                Seguimos trabajando en tu sitio después de publicarlo.
-                Agregamos contenido, nuevas funcionalidades, mejoras y
-                realizamos revisiones técnicas para mantenerlo actualizado.
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-cream/60 md:text-lg">
+                {t("packs.maintenance.description")}
               </p>
 
               <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                {maintenance.items.map((item) => (
+                {maintenance.features.map((feature) => (
                   <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/75"
+                    key={feature}
+                    className="flex items-start gap-3 text-sm leading-relaxed text-cream/75"
                   >
                     <span className="text-[#55D6FF]">✓</span>
-                    <span>{item}</span>
+                    <span>{t(`packs.maintenance.features.${feature}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -354,27 +342,26 @@ export function Packs() {
 
             <div className="lg:min-w-64">
               <div className="border border-[#55D6FF]/40 p-6">
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
-                  Desde
+                <span className="font-mono text-xs uppercase tracking-[0.15em] text-cream/40">
+                  {t("packs.maintenance.from")}
                 </span>
 
                 <div className="mt-2 font-momo text-5xl tracking-[-0.04em]">
                   {maintenance.price}
-                  <span className="font-mono text-sm tracking-normal text-white/40">
-                    /mes
+                  <span className="font-mono text-sm tracking-normal text-cream/40">
+                    {t("packs.maintenance.perMonth")}
                   </span>
                 </div>
 
-                <p className="mt-4 text-xs leading-relaxed text-white/40">
-                  Servicio opcional. El alcance de cada trabajo se acuerda
-                  según las necesidades del proyecto.
+                <p className="mt-4 text-xs leading-relaxed text-cream/40">
+                  {t("packs.maintenance.note")}
                 </p>
 
                 <a
                   href="#contacto"
                   className="mt-6 flex items-center justify-between border border-[#55D6FF] bg-[#55D6FF] px-5 py-4 text-sm font-medium uppercase tracking-[0.12em] text-[#102A43] transition-all duration-300 hover:bg-transparent hover:text-[#55D6FF]"
                 >
-                  <span>Consultar mantenimiento</span>
+                  <span>{t("packs.maintenance.button")}</span>
                   <span>→</span>
                 </a>
               </div>
@@ -382,76 +369,74 @@ export function Packs() {
           </div>
         </article>
 
-        <article className="marketing-card mt-8 border border-[#55D6FF]/40 bg-white/[0.03] p-7 md:p-10">
+        <article className="marketing-card mt-8 border border-[#55D6FF]/40 bg-cream/[0.03] p-7 md:p-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-4">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#55D6FF]">
-                  Servicio adicional
+                  {t("packs.additionalService")}
                 </span>
 
-                <span className="h-px w-12 bg-white/20" />
+                <span className="h-px w-12 bg-cream/20" />
 
                 <span className="font-mono text-xl font-bold uppercase tracking-[0.15em] text-coral">
-                  Marketing digital
+                  {t("packs.marketing.name")}
                 </span>
               </div>
 
               <h3 className="mt-6 font-momo text-4xl tracking-[-0.04em] md:text-5xl">
-                Más visibilidad.
-                <br />
-                <span className="text-[#55D6FF]">
-                  Más oportunidades.
-                </span>
+                <Trans
+                  i18nKey="packs.marketing.title"
+                  components={{
+                    br: <br />,
+                    accent: <span className="text-[#55D6FF]" />,
+                  }}
+                />
               </h3>
 
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
-                Complementamos tu web con acciones de marketing para mejorar
-                tu presencia digital y conectar con tus potenciales clientes.
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-cream/60 md:text-lg">
+                {t("packs.marketing.description")}
               </p>
 
               <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {marketing.items.map((item) => (
+                {marketing.features.map((feature) => (
                   <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/75"
+                    key={feature}
+                    className="flex items-start gap-3 text-sm leading-relaxed text-cream/75"
                   >
                     <span className="text-[#55D6FF]">✓</span>
-                    <span>{item}</span>
+                    <span>{t(`packs.marketing.features.${feature}`)}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="mt-6 text-xs leading-relaxed text-white/40">
-                El volumen de publicaciones y las plataformas se definen
-                según las necesidades del negocio. Publicidad de pago,
-                fotografía y vídeo profesional no incluidos.
+              <p className="mt-6 text-xs leading-relaxed text-cream/40">
+                {t("packs.marketing.footnote")}
               </p>
             </div>
 
             <div className="lg:min-w-64">
               <div className="border border-[#55D6FF]/40 p-6">
-                <span className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
-                  Desde
+                <span className="font-mono text-xs uppercase tracking-[0.15em] text-cream/40">
+                  {t("packs.marketing.from")}
                 </span>
 
                 <div className="mt-2 font-momo text-5xl tracking-[-0.04em]">
                   {marketing.price}
-                  <span className="font-mono text-sm tracking-normal text-white/40">
-                    /mes
+                  <span className="font-mono text-sm tracking-normal text-cream/40">
+                    {t("packs.marketing.perMonth")}
                   </span>
                 </div>
 
-                <p className="mt-4 text-xs leading-relaxed text-white/40">
-                  Servicio adicional y opcional. Presupuesto personalizado
-                  según el alcance.
+                <p className="mt-4 text-xs leading-relaxed text-cream/40">
+                  {t("packs.marketing.note")}
                 </p>
 
                 <a
                   href="#contacto"
                   className="mt-6 flex items-center justify-between border border-[#55D6FF] bg-[#55D6FF] px-5 py-4 text-sm font-medium uppercase tracking-[0.12em] text-[#102A43] transition-all duration-300 hover:bg-transparent hover:text-[#55D6FF]"
                 >
-                  <span>Consultar servicio</span>
+                  <span>{t("packs.marketing.button")}</span>
                   <span>→</span>
                 </a>
               </div>

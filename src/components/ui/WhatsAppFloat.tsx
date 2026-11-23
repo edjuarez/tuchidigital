@@ -1,9 +1,11 @@
 
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { FaWhatsapp } from "react-icons/fa";
 
 export function WhatsAppFloat() {
+  const { t } = useTranslation();
   const buttonRef = useRef<HTMLAnchorElement>(null);
   const labelRef = useRef<HTMLSpanElement>(null);
 
@@ -81,9 +83,7 @@ export function WhatsAppFloat() {
   }, []);
 
   const phoneNumber = "+34617913802";
-  const message = encodeURIComponent(
-    "Hola, me gustaría recibir información sobre vuestros servicios web.",
-  );
+  const message = encodeURIComponent(t("whatsapp.message"));
 
   return (
     <div className="fixed bottom-6 right-6 z-[100] flex items-center gap-3 md:bottom-8 md:right-8">
@@ -91,7 +91,7 @@ export function WhatsAppFloat() {
         ref={labelRef}
         className="pointer-events-none absolute right-[calc(100%+12px)] whitespace-nowrap border border-[#55D6FF]/30 bg-[#102A43] px-4 py-3 text-[1.20rem] font-momo tracking-[0.15em] text-[#F5F3EE] shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
       >
-        ¡Hablemos!
+        {t("whatsapp.label")}
       </span>
 
       <a
@@ -99,7 +99,7 @@ export function WhatsAppFloat() {
         href={`https://wa.me/${phoneNumber}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contactar con Tuchi Digital por WhatsApp"
+        aria-label={t("whatsapp.aria")}
         className="group relative flex h-16 w-16 items-center justify-center border border-[#55D6FF] hover:border-navy bg-[#102A43] text-[#55D6FF] shadow-[0_8px_30px_rgba(16,42,67,0.25)] transition-colors duration-300 hover:bg-[#55D6FF] hover:text-[#102A43] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#55D6FF] md:h-[72px] md:w-[72px]"
       >
         <FaWhatsapp className="text-[30px] transition-transform duration-300 group-hover:scale-110 md:text-[34px]" />
