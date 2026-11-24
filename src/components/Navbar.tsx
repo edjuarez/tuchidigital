@@ -30,15 +30,16 @@ export default function Navbar() {
         >
           tuchi<span className="text-[#55D6FF]">digital</span>
         </a>
-        <div className="hidden items-center gap-2 md:flex lg:gap-3">
+        <div className="hidden items-center md:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="
+                uppercase
                 inline-flex items-center justify-center
-                px-2 py-3
-                text-[1rem] font-bold text-cream
+                px-3 py-3
+                text-[0.90rem] font-bold text-cream
                 transition-all duration-200
                 hover:bg-cream/10
                 hover:text-[#55D6FF]
